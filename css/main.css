@@ -113,6 +113,19 @@ section.banner1 {
   z-index: 1 !important;
 }
 
+@media only screen and (max-width: 991px) {
+  .mT-50 {
+    margin-top: 50px !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .centerElem {
+    float: none !important;
+    margin: 0 auto !important;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   section.banner {
     height: auto;
