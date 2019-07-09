@@ -1001,7 +1001,7 @@
                         </div>
                         <div class="col-md-3">
                           <h5 class="feature-title">From</h5>
-                          <p class="grey-text">14,500 </p>
+                          <p class="grey-text">#224,500 </p>
                           <button type="button" class="btn btn-md btn-warning  mb-3">details</button>
                         </div>
                       </div>
@@ -1028,7 +1028,7 @@
                           </div>
                           <div class="col-md-3">
                             <h5 class="feature-title">From</h5>
-                            <p class="grey-text">14,500 </p>
+                            <p class="grey-text">#257,500 </p>
                             <button type="button" class="btn btn-md btn-warning  mb-3">details</button>
                           </div>
                         </div>
@@ -1054,7 +1054,7 @@
                           </div>
                           <div class="col-md-3">
                             <h5 class="feature-title">From</h5>
-                            <p class="grey-text">14,500 </p>
+                            <p class="grey-text">#350,000 </p>
                             <button type="button" class="btn btn-md btn-warning  mb-3">details</button>
                           </div>
                         </div>
@@ -1066,7 +1066,7 @@
               <div class="col-lg-6 col-md-12">
                   <div class="row">
                   <div class="col-md-9">
-                    <h3 class="orange-text">Nigerian Holiday Packages</h3>
+                    <h3 class="orange-text">International Holiday Packages</h3>
                   </div>
                     <div class="col-md-3">
                   <button type="button" class="btn btn-md btn-warning  mb-3 waves-effect waves-light">View All</button>
@@ -1093,7 +1093,7 @@
                           </div>
                           <div class="col-md-3">
                             <h5 class="feature-title">From</h5>
-                            <p class="grey-text">14,500 </p>
+                            <p class="grey-text">$7,500 </p>
                             <button type="button" class="btn btn-md btn-warning  mb-3 waves-effect waves-light">details</button>
                           </div>
                         </div>
@@ -1120,7 +1120,7 @@
                             </div>
                             <div class="col-md-3">
                               <h5 class="feature-title">From</h5>
-                              <p class="grey-text">14,500 </p>
+                              <p class="grey-text">$14,500 </p>
                               <button type="button" class="btn btn-md btn-warning  mb-3 waves-effect waves-light">details</button>
                             </div>
                           </div>
@@ -1145,7 +1145,7 @@
                             </div>
                             <div class="col-md-3">
                               <h5 class="feature-title">From</h5>
-                              <p class="grey-text">14,500 </p>
+                              <p class="grey-text">$8,500 </p>
                               <button type="button" class="btn btn-md btn-warning  mb-3 waves-effect waves-light">details</button>
                             </div>
                           </div>
@@ -1365,6 +1365,7 @@
       <!--Main layout-->
 
       <!--Footer-->
+      <a href="#popup" class="btn btn--white">Book now!</a>
     <footer id="footer" class="page-footer unique-color-dark pt-4 mt-4">
 
       <!--Footer Links-->
@@ -1495,14 +1496,43 @@
       <!--/.Footer Links-->
       <!-- Copyright-->
       <div class="footer-copyright py-3 text-center">
-        © 2018 Copyright:
+        <span id="year"></span> Copyright
         <a href="#">
-          <strong>Flight Booking </strong>
+          <strong>Flybeta</strong>
         </a>
       </div>
       <!--/.Copyright -->
     </footer>
       <!--/.Footer-->
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <!-- <div class="popup__left">
+                <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+                <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+            </div> -->
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                <p class="popup__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit
+                    amet massa vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim enim
+                    sit. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget
+                    gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet.
+                    Gravida neque convallis a cras semper. Molestie at elementum eu facilisis sed odio morbi quis. Faucibus
+                    vitae aliquet nec ullamcorper sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa
+                    vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed
+                    euismod nisi porta.
+                </p>
+                <a href="https://paystack.com/pay/flybetabook" target="_blank" class="btn btn--green">Book now</a>
+            </div>
+        </div>
+    </div>
 
         <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo" crossorigin="anonymous"></script>
