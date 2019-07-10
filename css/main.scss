@@ -114,15 +114,12 @@ section.banner1 {
 }
 
 /* abayomi styles Start */
-#panel1011 {
-    margin-left: 7rem;
-}
 
 #originFrom,
 #destinationTo,
 #departing-date-picker,
 #returning-date-picker {
-    width: 13rem;
+    width: 12rem;
     /* margin: 1rem; */
 }
 
@@ -134,15 +131,10 @@ section.banner1 {
     margin-left: 6rem;
 }
 
-#one_wayANDround_trip {
-    margin-left: 19rem;
-    margin-bottom: 1rem;
-}
-
 #adultNumber,
-#childrenNumber,
-#classType #flight_saveAndBook {
-    width: 13rem;
+#childrenNumber
+{
+    width: 3rem;
 }
 
 #childrenNumber {
@@ -150,25 +142,34 @@ section.banner1 {
 }
 
 #classType {
-    width: 13rem;
-    margin-left: 5.8rem;
-    height: 45px;
+    margin-left: 0.5rem;
 }
 
-#flight_saveAndBook {
-    height: 45px;
-    padding: 8px;
-    margin-left: -6rem;
-    margin-top: 4rem;
-}
+// #flight_saveAndBook {
+//     height: 45px;
+//     padding: 8px;
+//     margin-left: -6rem;
+//     margin-top: 4rem;
+// }
 
 .belowDiv {
     margin-top: 2rem;
 }
+.flex{
+    display: flex;
+    justify-content: center;
+}
 
-.classtype_text {
-    margin-left: 7rem;
-    margin-left: 7rem;
+@media only screen and (max-width: 993px) {
+   .flex {
+       display: block;
+       position: relative;
+       left:35%;
+   }
+   .centerAlign{
+       text-align: center;
+   }
+  
 }
 
 @media only screen and (max-width: 991px) {

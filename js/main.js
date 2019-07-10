@@ -122,21 +122,21 @@ console.log(JSON.parse(sessionStorage.getItem('carForm')))
   })
 
   //  FORM OF BUS
-  const busForm = selector('#busForm');
+//   const busForm = selector('#busForm');
 
 
-  const bus_departure = selector('#bus_departure');
-  const bus_destination = selector('#bus_destination');
-  const departing = selector('#departing');
+//   const bus_departure = selector('#bus_departure');
+//   const bus_destination = selector('#bus_destination');
+//   const departing = selector('#departing');
 
-  busForm.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    sessionStorage.setItem('busForm', JSON.stringify ([{
-     bus_departure: bus_departure.value,
-     bus_destination: bus_destination.value,
-     departing: departing.value
-}]))
+//   busForm.addEventListener('submit', (e)=>{
+//     e.preventDefault();
+//     sessionStorage.setItem('busForm', JSON.stringify ([{
+//      bus_departure: bus_departure.value,
+//      bus_destination: bus_destination.value,
+//      departing: departing.value
+// }]))
 
 
-console.log(JSON.parse(sessionStorage.getItem('busForm')))
-  })
+// console.log(JSON.parse(sessionStorage.getItem('busForm')))
+//   })
