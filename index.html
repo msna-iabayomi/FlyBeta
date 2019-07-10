@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -101,12 +102,6 @@
                                     <a class="nav-link waves-light white-text waves-effect waves-light" data-toggle="tab" href="#panel1013" role="tab">
                                         <i class="fa fa-car fa-1x px-2 py-1" aria-hidden="true"></i>
                                       CARS</a>
-
-
-                                    <a class="nav-link waves-light white-text waves-effect waves-light" data-toggle="tab" href="#panel1014" role="tab">
-                                        <i class="fa fa-bus fa-1x px-2 py-1" aria-hidden="true"></i>
-                                      BUS</a> 
-
                                 </li>    
                             </ul>
 
@@ -118,24 +113,24 @@
                             <!--Panel 1-->
                             <div class="tab-pane fade in active show" id="panel1011" role="tabpanel" style=" padding: 20px;">
                                 <form class="ng-pristine ng-valid ng-valid-pattern ng-valid-maxlength" id="flightForm">
-                                  <ul class="nav nav-tab md-tabs">
+                                  <ul class="nav nav-tab md-tabs" id="one_wayANDround_trip">
                                       <li class="nav-item">
-                                          <a class="nav-link black-text waves-effect waves-light active show" data-toggle="tab" href="#panel1" role="tab">One Way</a>
+                                          <a class="nav-link black-text waves-effect waves-light active show" data-toggle="tab" href="#panel1" role="tab" id="one_way">One Way</a>
                                       </li>
                                       <li class="nav-item">
-                                          <a class="nav-link waves-light black-text waves-effect waves-light" data-toggle="tab" href="#panel2" role="tab">Round Trip</a>
+                                          <a class="nav-link waves-light black-text waves-effect waves-light" data-toggle="tab" href="#panel2" role="tab" id="round_trip">Round Trip</a>
                                       </li>
                                     
                                   </ul>
-                                    <div class="row">
+                                    <div class="row panel1011_firstDiv">
                                         <div class="col-md-3">
                                             <label class="black-text active">Origin</label>
-                                            <input type="text" id="originFrom" class="form-control" placeholder="City, Airport"> 
+                                            <input type="text" id="originFrom" class="form-control" placeholder="City, Airport" required> 
                                         </div>
                                         <div class="col-md-2">
                                         <label class="black-text">Destination</label>
 
-                                        <input type="text" id="destinationTo" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" placeholder="City, Airport" > 
+                                        <input type="text" id="destinationTo" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" placeholder="City, Airport" required> 
                                         </div>
                                         <div class="col-md-3">
 
@@ -155,12 +150,12 @@
                                       
                       </div>
                                     </div>
-                    <div class="row">
+                    <div class="row belowDiv">
 
                                         <div class="col-md-3" style="padding-left: 3px;    padding-right: 5px;">
                                             <label class="black-text active">Adults</label>
                                             <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty" autocomplete="on" style=" border: 1px solid #ced4da;
-                                                    border-radius: .25rem;   width: 100%;
+                                                    border-radius: .25rem; 
                                                     height: 40px;" id="adultNumber">
                                                 <option selected="selected" >
                                                   0
@@ -182,7 +177,7 @@
                                         <div class="col-md-2" style="padding-left: 5px; padding-right: 5px;">
                                             <label class="black-text">Children</label>
                                             <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty" autocomplete="on" style=" border: 1px solid #ced4da;
-                                                    border-radius: .25rem; width: 100%;
+                                                    border-radius: .25rem;
                                                     height: 40px;" id="childrenNumber">
                                                 <option selected="selected" >0</option>
                                                 <option>
@@ -203,9 +198,9 @@
                                             </select>
                                         </div>
                                         <div class="col-md-2" style="padding-left: 5px; padding-right: 0px;">
-                                            <label class="black-text active">Class Type</label>
-                                              <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty" autocomplete="on" style=" border: 1px solid #ced4da;
-                                                    border-radius: .25rem;  width: 100%;
+                                            <label class="black-text active classtype_text" >Class Type</label>
+                 <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty" autocomplete="on" style=" border: 1px solid #ced4da;
+                                                    border-radius: .25rem;
                                                     height: 40px;" id="classType">
                                                 <option selected="selected" >
                                                   First Class
@@ -219,9 +214,9 @@
                                               
                                             </select>
                                         </div>
-                                        <div class="col-md-3">
-                                            <button type="submit" class="btn btn-warning waves-effect waves-light mt-4">Book</button>
-                                            <button href class="btn btn-warning waves-effect waves-light mt-4">Save and Book Hotel</button>
+                                        <div class="col-12">
+                                            
+                                            <button class="btn btn-warning waves-effect waves-light mt-4" id="flight_saveAndBook">Save and Book Hotel</button>
                                         </div>
                                     </div>
                                 </form>
@@ -231,7 +226,7 @@
 
                             <!--Panel 2-->
                             <div class="tab-pane fade" id="panel1012" role="tabpanel" style=" padding: 20px;">
-                                <form class="ng-pristine ng-valid ng-valid-maxlength"> 
+                                <form class="ng-pristine ng-valid ng-valid-maxlength" id='hotelForm'> 
                   <ul class="nav nav-tab md-tabs">
                     <li class="nav-item">
                         <a class="nav-link black-text waves-effect waves-light active show" data-toggle="tab" href="#panel1" role="tab">Domestic Hotel</a>
@@ -245,7 +240,7 @@
                                         <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
                                             <label class="black-text">Where are you going?</label>
 
-                                            <input type="text"  id="exampleForm2" class="form-control" placeholder="City">
+                                            <input type="text"  id="hotel_destination" class="form-control" placeholder="City" required>
                                             
                                         </div>
                                         <div class="col-md-3" style="padding-left: 3px;    padding-right: 5px;">
@@ -253,17 +248,17 @@
                                             <label class="black-text active">Hotel Preference</label>
                                             <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty" style=" border: 1px solid #ced4da;
                                                     border-radius: .25rem;   width: 100%;
-                                                    height: 40px;" name="mobile_operator" id="prepaid_special"><option value="? undefined:undefined ?" selected="selected"></option>
+                                                    height: 40px;" name="mobile_operator" id="hotel_preference"><option value="? undefined:undefined ?" selected="selected"></option>
                                                 <!-- ngRepeat: dth in myData2 -->
-                          <option ng-repeat="dth in myData2" ng-selected="goperator === operator.id" value="TTV" selected="selected">
+                          <option ng-repeat="dth in myData2" ng-selected="goperator === operator.id"  selected="selected">
                                                     All
-                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id" value="VTV" selected="selected">
+                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id"  selected="selected">
                                                     5
-                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id" value="ATV" selected="selected">
+                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id" selected="selected">
                                                   4
-                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id" value="BTV" selected="selected">
+                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id"  selected="selected">
                                                   3
-                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id" value="DTV">
+                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id">
                                                   2
                                                 </option><!-- end ngRepeat: dth in myData2 -->
                                             </select>
@@ -275,13 +270,13 @@
                                             <label class="black-text active">
     Check-in</label>
 
-                                            <input placeholder="Selected date" type="date" id="date-picker-example" class="form-control datepicker">
+                                            <input placeholder="Selected date" type="date" id="check_in_date" class="form-control datepicker">
                                         </div>
                       <div class="col-md-3" style="padding-left: 5px;    padding-right: 0px;">
                                             <label class="black-text active">
     Check-Out</label>
 
-                                            <input placeholder="Selected date" type="date" id="date-picker-example" class="form-control datepicker">
+                                            <input placeholder="Selected date" type="date" id="check_out_date" class="form-control datepicker">
                                         </div>
           
                                     </div>
@@ -291,19 +286,19 @@
 
                                           <!-- Default inline 1-->
     <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+      <input type="radio" class="custom-control-input" value="1" id="defaultInline1" name="inlineDefaultRadiosExample">
       <label class="custom-control-label orange-text" for="defaultInline1">1</label>
     </div>
 
     <!-- Default inline 2-->
     <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+      <input type="radio" class="custom-control-input"  value="2" id="defaultInline2" name="inlineDefaultRadiosExample">
       <label class="custom-control-label orange-text" for="defaultInline2">2</label>
     </div>
 
     <!-- Default inline 3-->
     <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
+      <input type="radio" class="custom-control-input"  value="3" id="defaultInline3" name="inlineDefaultRadiosExample">
       <label class="custom-control-label orange-text" for="defaultInline3">3</label>
     </div>
                                             
@@ -518,7 +513,7 @@
               
       </div>
             <div class="col-md-3">
-                                            <button type="submit" class="btn btn-warning waves-effect waves-light mt-4" style="padding: 10px 15px 10px 15px">Desire Book Go</button>
+              <button href class="btn btn-warning waves-effect waves-light mt-4">Save and Book Hotel</button>
 
                                         </div>
                                     </div>
@@ -529,7 +524,7 @@
 
                             <!--Panel 3-->
                             <div class="tab-pane fade" id="panel1013" role="tabpanel" style="    padding: 20px;">
-                                <form class="ng-pristine ng-valid ng-valid-maxlength">
+                                <form class="ng-pristine ng-valid ng-valid-maxlength" id='carForm'>
                                     <div class="row">
 
                                         <div class="col-md-4" style="padding-left: 5px;    padding-right: 5px;">
@@ -537,12 +532,12 @@
 
                                             <select class="form-control ng-pristine ng-valid ng-empty ng-touched ng-untouched" style=" border: 1px solid #ced4da;
                                                     border-radius: .25rem;   width: 100%;
-                                                    height: 40px;" name="mobile_operator" id="prepaid_special"> 
-                                              <!-- ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id" value="TTV" selected="selected" ">
+                                                    height: 40px;" name="mobile_operator" id="travel_type"> 
+                                              <!-- ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id" selected="selected" ">
                                                 Out Station
-                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id" value="VTV" selected="selected">
+                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id"  selected="selected">
                                                     Local
-                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id" value="ATV" selected="selected">
+                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id" selected="selected">
                                                   Transfer
                                                 </option><!-- end ngRepeat: dth in myData2 -->
                                             </select>
@@ -569,14 +564,14 @@
 
                                         <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
                                             <label class="black-text">Form</label>
-      <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" autocomplete="off" placeholder="Source city">  
+      <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" id="source_city"type="text" autocomplete="off" placeholder="Source city" required>  
                         
                                         </div>
                                         <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
                                             <label class="black-text">
     To</label>
 
-                                            <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" autocomplete="off" placeholder="Destination city">      
+                                            <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" autocomplete="off" id="destination_city" placeholder="Destination city" required>      
                                           </div>
 
                                       <div class="tab-content col-md-6">
@@ -589,11 +584,11 @@
                       <div class="col-md-4 float-left">
                                             <label class="black-text active">Travel / Start Date</label>
 
-                                            <input placeholder="Selected date" type="date" id="date-picker-example" class="form-control datepicker"> 
+                                            <input placeholder="Selected date" type="date" id="multiCity_trip_date_2" class="form-control datepicker"> 
                         </div><div class="col-md-4 float-left">
                                             <label class="black-text active">Travel / Start Date</label>
 
-                                            <input placeholder="Selected date" type="date" id="date-picker-example" class="form-control datepicker"> 
+                                            <input placeholder="Selected date" type="date" id="multiCity_trip_date_1" class="form-control datepicker"> 
                         </div>
                       </div>
                       <!---multi-city---->
@@ -601,7 +596,7 @@
                       <div class="col-md-6 tab-pane fade float-left" id="panel4" role="tabpanel">
                                             <label class="black-text active">Travel / Start Date</label>
 
-                                            <input placeholder="Selected date" type="date" id="date-picker-example" class="form-control datepicker"> 
+                                            <input placeholder="Selected date" type="date" id="one_way_trip_date" class="form-control datepicker"> 
                         </div>
                         <!---one-way-------->
                         <!---round-city---->
@@ -609,13 +604,13 @@
                         <div class="col-md-6 float-left">
                                             <label class="black-text active">Return Date</label>
 
-                                          <input placeholder="Selected date" type="date" id="date-picker-example" class="form-control datepicker">   
+                                          <input placeholder="Selected date" type="date" id="returnTrip_date" class="form-control datepicker">   
                           </div>
     <div class="col-md-6 float-left">
 
                                             <label class="black-text active">Travel / Start Date</label>
 
-                                            <input placeholder="Selected date" type="date" id="date-picker-example" class="form-control datepicker"> 
+                                            <input placeholder="Selected date" type="date" id="round_trip_date" class="form-control datepicker"> 
                         </div>
                         </div>
                         <!---round-city---->
@@ -631,14 +626,14 @@
                                         <div class="col-md-2" style="padding-left: 5px;    padding-right: 5px;">
                                         
 
-                                            <select name="pickup_hours_outstation" id="pickup_hours_outstation" class="form-control">
+                                            <select name="pickup_hours_outstation" id="pickup_hours" class="form-control">
                           <option value="-1">--hours--</option>
                                 
-                                  <option value="01">01</option>
+                                  <option >01</option>
                                 
-                                  <option value="02">02</option>
+                                  <option>02</option>
                                 
-                                  <option value="03">03</option>
+                                  <option>03</option>
                                 
                                   <option value="04">04</option>
                                 
@@ -663,16 +658,16 @@
                                         <div class="col-md-2" style="padding-left: 5px;    padding-right: 5px;">
                                         
                                         
-                                        <select name="pickup_minutes_outstation" id="pickup_minutes_outstation" class="form-control">
+                                        <select name="pickup_minutes_outstation" id="pickup_minutes" class="form-control">
                                 <option value="-1">--minutes--</option>
                                 
-                                  <option value="00">00</option>
+                                  <option>00</option>
                                 
-                                  <option value="01">01</option>
+                                  <option>01</option>
                                 
-                                  <option value="02">02</option>
+                                  <option>02</option>
                                 
-                                  <option value="03">03</option>
+                                  <option>03</option>
                                 
                                   <option value="04">04</option>
                                 
@@ -793,13 +788,13 @@
                                           
 
                                           
-                                            <select name="pickup_meridiem_outstation" id="pickup_meridiem_outstation" class="form-control">
+                                            <select name="pickup_meridiem_outstation" id="pickup_meridiem" class="form-control">
                                 <option value="-1">--meridiem--</option>
                                 <option value="AM">AM</option>
                                 <option value="PM">PM</option>
                               </select>     </div>
                                         <div class="col-md-3">
-                                            <label class="black-text"> </label> <button type="submit" class="btn btn-warning waves-effect waves-light" value="submit" style="padding: 10px 15px 10px 15px;">Desire Book Go</button>
+                                          <button class="btn btn-warning waves-effect waves-light mt-4">Save and Book Hotel</button>
 
                                         </div>
                                     </div>
@@ -810,18 +805,18 @@
 
                             <!--Panel 4-->
                             <div class="tab-pane fade" id="panel1014" role="tabpanel" style="    padding: 20px;">
-                                <form class="ng-pristine ng-valid ng-valid-maxlength">
+                                <form class="ng-pristine ng-valid ng-valid-maxlength" id='busForm'>
                                     <div class="row">
 
                                         <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
                                             <label class="black-text">Select a city (From)</label>
 
-                                        <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" name="amount" autocomplete="on" maxlength="4" placeholder="Type City Name">
+                                        <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" name="amount" autocomplete="on" placeholder="Type City Name" id='bus_departure' required>
                                         </div>
                                         <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
                                             <label class="black-text">Select a city (To)</label>
 
-                                    <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" name="amount" autocomplete="on" maxlength="4"  placeholder="Type City Name">
+                                    <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" name="amount" autocomplete="on"  id='bus_destination' placeholder="Type City Name" required>
                                         </div>
                                       
 
@@ -829,7 +824,7 @@
                                         <div class="col-md-3" style="padding-left: 5px;    padding-right: 0px;">
                                             <label class="black-text active">Departing</label>
 
-                                            <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" name="amount" autocomplete="on" maxlength="4">
+                                            <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" name="amount" autocomplete="on" id='departing' required>
                                         </div>
                                         <div class="col-md-3"><label class="black-text"><button type="submit" ng-click="sendRecharge(recharge)" class="btn btn-warning waves-effect waves-light mt-4" value="submit">Desire Book Go</button>
 
@@ -1391,7 +1386,7 @@
               <a id="footer-link-license" href="#">24/7 Dedicated Customer Support</a>
             </p>
             <p>
-              <a id="footer-link-changelog" href="#">Copyright © 2019 Flybeta (Nigeria) Ltd. 
+              <a id="footer-link-changelog" href="#">Copyright © 2008-2018 Flybeta (Nigeria) Ltd. 
     All Rights Reserved.</a>
             </p>
         
@@ -1520,4 +1515,5 @@
   </body>
 
 </html>
+
 

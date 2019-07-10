@@ -57,8 +57,6 @@ const check_out_date = selector("#check_out_date");
 // const radio_three = selector("#radio_three");
 // const nationality = selector("#nationality");
 let checkBox  = [...document.querySelectorAll('input[type="radio"]')] 
-  console.log('hello')
-  console.log(checkBox);
 hotelForm.addEventListener('submit', (e)=>{
       e.preventDefault();
 //display value of checked checkbox
@@ -113,7 +111,7 @@ carForm.addEventListener('submit', (e)=>{
           pick_minutes  : pickup_minutes.value,
           pickup_meridiem:pickup_meridiem.value,
           multiCity_trip_date_1:multiCity_trip_date_1.value,
-          multiCity_trip_date_1: multiCity_trip_date_1.value,
+          multiCity_trip_date_2: multiCity_trip_date_2.value,
           one_way_trip_date: one_way_trip_date.value,
           round_trip_date: round_trip_date.value,
           returnTrip_date: returnTrip_date.value
