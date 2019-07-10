@@ -101,12 +101,6 @@
                                     <a class="nav-link waves-light white-text waves-effect waves-light" data-toggle="tab" href="#panel1013" role="tab">
                                         <i class="fa fa-car fa-1x px-2 py-1" aria-hidden="true"></i>
                                       CARS</a>
-
-
-                                    <a class="nav-link waves-light white-text waves-effect waves-light" data-toggle="tab" href="#panel1014" role="tab">
-                                        <i class="fa fa-bus fa-1x px-2 py-1" aria-hidden="true"></i>
-                                      BUS</a> 
-
                                 </li>    
                             </ul>
 
@@ -118,24 +112,24 @@
                             <!--Panel 1-->
                             <div class="tab-pane fade in active show" id="panel1011" role="tabpanel" style=" padding: 20px;">
                                 <form class="ng-pristine ng-valid ng-valid-pattern ng-valid-maxlength" id="flightForm">
-                                  <ul class="nav nav-tab md-tabs">
+                                  <ul class="nav nav-tab md-tabs" id="one_wayANDround_trip">
                                       <li class="nav-item">
-                                          <a class="nav-link black-text waves-effect waves-light active show" data-toggle="tab" href="#panel1" role="tab">One Way</a>
+                                          <a class="nav-link black-text waves-effect waves-light active show" data-toggle="tab" href="#panel1" role="tab" id="one_way">One Way</a>
                                       </li>
                                       <li class="nav-item">
-                                          <a class="nav-link waves-light black-text waves-effect waves-light" data-toggle="tab" href="#panel2" role="tab">Round Trip</a>
+                                          <a class="nav-link waves-light black-text waves-effect waves-light" data-toggle="tab" href="#panel2" role="tab" id="round_trip">Round Trip</a>
                                       </li>
                                     
                                   </ul>
-                                    <div class="row">
+                                    <div class="row panel1011_firstDiv">
                                         <div class="col-md-3">
                                             <label class="black-text active">Origin</label>
-                                            <input type="text" id="originFrom" class="form-control" placeholder="City, Airport"> 
+                                            <input type="text" id="originFrom" class="form-control" placeholder="City, Airport" required> 
                                         </div>
                                         <div class="col-md-2">
                                         <label class="black-text">Destination</label>
 
-                                        <input type="text" id="destinationTo" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" placeholder="City, Airport" > 
+                                        <input type="text" id="destinationTo" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" placeholder="City, Airport" required> 
                                         </div>
                                         <div class="col-md-3">
 
@@ -155,12 +149,12 @@
                                       
                       </div>
                                     </div>
-                    <div class="row">
+                    <div class="row belowDiv">
 
                                         <div class="col-md-3" style="padding-left: 3px;    padding-right: 5px;">
                                             <label class="black-text active">Adults</label>
                                             <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty" autocomplete="on" style=" border: 1px solid #ced4da;
-                                                    border-radius: .25rem;   width: 100%;
+                                                    border-radius: .25rem; 
                                                     height: 40px;" id="adultNumber">
                                                 <option selected="selected" >
                                                   0
@@ -182,7 +176,7 @@
                                         <div class="col-md-2" style="padding-left: 5px; padding-right: 5px;">
                                             <label class="black-text">Children</label>
                                             <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty" autocomplete="on" style=" border: 1px solid #ced4da;
-                                                    border-radius: .25rem; width: 100%;
+                                                    border-radius: .25rem;
                                                     height: 40px;" id="childrenNumber">
                                                 <option selected="selected" >0</option>
                                                 <option>
@@ -203,9 +197,9 @@
                                             </select>
                                         </div>
                                         <div class="col-md-2" style="padding-left: 5px; padding-right: 0px;">
-                                            <label class="black-text active">Class Type</label>
-                                              <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty" autocomplete="on" style=" border: 1px solid #ced4da;
-                                                    border-radius: .25rem;  width: 100%;
+                                            <label class="black-text active classtype_text" >Class Type</label>
+                 <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty" autocomplete="on" style=" border: 1px solid #ced4da;
+                                                    border-radius: .25rem;
                                                     height: 40px;" id="classType">
                                                 <option selected="selected" >
                                                   First Class
@@ -219,9 +213,9 @@
                                               
                                             </select>
                                         </div>
-                                        <div class="col-md-3">
-                                            <button type="submit" class="btn btn-warning waves-effect waves-light mt-4">Book</button>
-                                            <button href class="btn btn-warning waves-effect waves-light mt-4">Save and Book Hotel</button>
+                                        <div class="col-12">
+                                            
+                                            <button class="btn btn-warning waves-effect waves-light mt-4" id="flight_saveAndBook">Save and Book Hotel</button>
                                         </div>
                                     </div>
                                 </form>
@@ -245,7 +239,7 @@
                                         <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
                                             <label class="black-text">Where are you going?</label>
 
-                                            <input type="text"  id="hotel_destination" class="form-control" placeholder="City">
+                                            <input type="text"  id="hotel_destination" class="form-control" placeholder="City" required>
                                             
                                         </div>
                                         <div class="col-md-3" style="padding-left: 3px;    padding-right: 5px;">
@@ -518,7 +512,7 @@
               
       </div>
             <div class="col-md-3">
-                                            <button type="submit" class="btn btn-warning waves-effect waves-light mt-4" style="padding: 10px 15px 10px 15px">Desire Book Go</button>
+              <button href class="btn btn-warning waves-effect waves-light mt-4">Save and Book Hotel</button>
 
                                         </div>
                                     </div>
@@ -569,14 +563,14 @@
 
                                         <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
                                             <label class="black-text">Form</label>
-      <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" id="source_city"type="text" autocomplete="off" placeholder="Source city">  
+      <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" id="source_city"type="text" autocomplete="off" placeholder="Source city" required>  
                         
                                         </div>
                                         <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
                                             <label class="black-text">
     To</label>
 
-                                            <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" autocomplete="off" id="destination_city" placeholder="Destination city">      
+                                            <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" autocomplete="off" id="destination_city" placeholder="Destination city" required>      
                                           </div>
 
                                       <div class="tab-content col-md-6">
@@ -589,7 +583,7 @@
                       <div class="col-md-4 float-left">
                                             <label class="black-text active">Travel / Start Date</label>
 
-                                            <input placeholder="Selected date" type="date" id="round_trip_date" class="form-control datepicker"> 
+                                            <input placeholder="Selected date" type="date" id="multiCity_trip_date_2" class="form-control datepicker"> 
                         </div><div class="col-md-4 float-left">
                                             <label class="black-text active">Travel / Start Date</label>
 
@@ -601,7 +595,7 @@
                       <div class="col-md-6 tab-pane fade float-left" id="panel4" role="tabpanel">
                                             <label class="black-text active">Travel / Start Date</label>
 
-                                            <input placeholder="Selected date" type="date" id="multiCity_trip_date_2" class="form-control datepicker"> 
+                                            <input placeholder="Selected date" type="date" id="one_way_trip_date" class="form-control datepicker"> 
                         </div>
                         <!---one-way-------->
                         <!---round-city---->
@@ -615,7 +609,7 @@
 
                                             <label class="black-text active">Travel / Start Date</label>
 
-                                            <input placeholder="Selected date" type="date" id="one_way_trip_date" class="form-control datepicker"> 
+                                            <input placeholder="Selected date" type="date" id="round_trip_date" class="form-control datepicker"> 
                         </div>
                         </div>
                         <!---round-city---->
@@ -799,7 +793,7 @@
                                 <option value="PM">PM</option>
                               </select>     </div>
                                         <div class="col-md-3">
-                                            <label class="black-text"> </label> <button type="submit" class="btn btn-warning waves-effect waves-light" value="submit" style="padding: 10px 15px 10px 15px;">Desire Book Go</button>
+                                          <button class="btn btn-warning waves-effect waves-light mt-4">Save and Book Hotel</button>
 
                                         </div>
                                     </div>
@@ -816,12 +810,12 @@
                                         <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
                                             <label class="black-text">Select a city (From)</label>
 
-                                        <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" name="amount" autocomplete="on" maxlength="4" placeholder="Type City Name" id='bus_departure' required>
+                                        <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" name="amount" autocomplete="on" placeholder="Type City Name" id='bus_departure' required>
                                         </div>
                                         <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
                                             <label class="black-text">Select a city (To)</label>
 
-                                    <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" name="amount" autocomplete="on" maxlength="4" id='bus_destination' placeholder="Type City Name" required>
+                                    <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" name="amount" autocomplete="on"  id='bus_destination' placeholder="Type City Name" required>
                                         </div>
                                       
 
@@ -829,7 +823,7 @@
                                         <div class="col-md-3" style="padding-left: 5px;    padding-right: 0px;">
                                             <label class="black-text active">Departing</label>
 
-                                            <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" name="amount" autocomplete="on" id='departing' maxlength="4"  required>
+                                            <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" name="amount" autocomplete="on" id='departing' required>
                                         </div>
                                         <div class="col-md-3"><label class="black-text"><button type="submit" ng-click="sendRecharge(recharge)" class="btn btn-warning waves-effect waves-light mt-4" value="submit">Desire Book Go</button>
 
