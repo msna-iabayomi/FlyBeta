@@ -160,29 +160,50 @@ section.banner1 {
     justify-content: center;
 }
 
-@media only screen and (max-width: 993px) {
-   .flex {
-       display: block;
-       position: relative;
-       left:35%;
-   }
-   .centerAlign{
-       text-align: center;
-   }
-  
-}
-
 @media only screen and (max-width: 991px) {
     .mT-50 {
         margin-top: 50px!important;
+    }
+    .flex{
+        justify-content: space-evenly;
+        margin-left:-72px;
     }
 }
 
 @media only screen and (max-width: 767px) {
     .centerElem {
-        float: none !important;
-        margin: 0 auto !important;
+     float: none !important;
+     margin: 0 auto !important;
     }
+    #originFrom,
+    #destinationTo,
+    #departing-date-picker,
+    #returning-date-picker {
+        width: 100%;
+    }
+    #round_trip{
+        width: 125px;
+    }
+   .flex{
+       margin-left: 0;
+       flex-direction: column;
+       justify-content: space-between;
+   }
+   .unflex{
+       flex-direction: row;
+   }
+   #flightForm{
+    display: flex;
+    flex-direction: column;
+   }
+   ul.md-tabs{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    justify-content: center;
+   }
+   
+   
+
 }
 
 @media only screen and (max-width: 768px) {

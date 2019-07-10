@@ -156,20 +156,15 @@ section.banner1 {
           justify-content: center;
 }
 
-@media only screen and (max-width: 993px) {
-  .flex {
-    display: block;
-    position: relative;
-    left: 35%;
-  }
-  .centerAlign {
-    text-align: center;
-  }
-}
-
 @media only screen and (max-width: 991px) {
   .mT-50 {
     margin-top: 50px !important;
+  }
+  .flex {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-left: -72px;
   }
 }
 
@@ -177,6 +172,49 @@ section.banner1 {
   .centerElem {
     float: none !important;
     margin: 0 auto !important;
+  }
+  #originFrom,
+  #destinationTo,
+  #departing-date-picker,
+  #returning-date-picker {
+    width: 100%;
+  }
+  #round_trip {
+    width: 125px;
+  }
+  .flex {
+    margin-left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .unflex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #flightForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  ul.md-tabs {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100px 100px;
+        grid-template-columns: 100px 100px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
