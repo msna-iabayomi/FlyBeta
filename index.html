@@ -847,11 +847,14 @@
                                       <option value="PM">PM</option>
                                     </select> </div>
                                   <div class="col-md-3">
-                                    <a href="#popup" class="btn btn-warning waves-effect waves-light mt-4">Book now!</a>
+                                    <button class="btn btn-warning waves-effect waves-light mt-4">Book now!</button>  
+                                    <!-- <button onclick="bookAll()">Book now!</button> -->
+                                    <!-- <h1> Book now!</h1> -->
+                                   
                                   </div>
                                 </div>
                               </form>
-
+                              <a  href="#popup" class="black-text active" id="print-ticket">Show Ticket</a>
                             </div>
                             <!--/.Panel 3-->
 
@@ -1600,13 +1603,47 @@
                 <a href="#section-tours" class="popup__close">&times;</a>
                 <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
                 <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
-                <p class="popup__text">
-                  nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget
-                  gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet.
-                  Grar sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa
-                  vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed
-                  euismod nisi porta.
-                </p>
+          <div id='testing'>  
+              <div id = 'filght_info'> 
+                <ul>
+                    <li class="popup__text" >Origin : <span id='ticket_origin'></span></li>
+                    <li class="popup__text" >Destination :<span id='ticket_destination'></span></li>
+                    <li class="popup__text" >Adult : <span id='ticket_adult'></span></li>
+                    <li class="popup__text" >Departing Date : <span id='ticket_departing'></span></li>
+                    <li class="popup__text" >Returning Date : <span id='ticket_returning'></span></li>
+                    <li class="popup__text" >Children : <span id='ticket_children'></span></li>
+                    <li class="popup__text" >Class Type : <span id='ticket_classType'></span></li>
+                </ul>
+            </div>
+            <div id="hotel_info">
+              <ul>
+                <li class="popup__text" >City : <span id='ticket_city'></span></li>
+                <li class="popup__text" >Hotel Preference :<span id='ticket_hotelPreference'></span></li>
+                <li class="popup__text" >Check-In Date : <span id='ticket_checkIn'></span></li>
+                <li class="popup__text" >Check-out Date : <span id='ticket_checkOut'></span></li>
+                <li class="popup__text" >Nationality : <span id='ticket_nationality'></span></li>
+                <li class="popup__text" >Room : <span id='ticket_room'></span></li>
+               
+            </ul>
+            </div>
+
+            <div id="car_info">
+              <ul>
+                <li class="popup__text" >Travel Type : <span id='ticket_travelType'></span></li>
+                <li class="popup__text" >Source City :<span id='ticket_sourceCity'></span></li>
+                <li class="popup__text" >Destination City : <span id='ticket_destinationCity'></span></li>
+                <li class="popup__text" >Multi-City-Trip Date2 : <span id='ticket_multiCity_trip_date_2'></span></li>
+                <li class="popup__text" >Multi-City-Trip Date1 : <span id='ticket_multiCity_trip_date_1'></span></li>
+                <li class="popup__text" >One way Trip : <span id='ticket_one_way_trip_date'></span></li>
+                <li class="popup__text" >Return-Date : <span id='ticket_returnTrip_date'></span></li>
+                <li class="popup__text" >Round-Trip Date  : <span id='ticket_round_trip_date'></span></li>
+                <li class="popup__text" >Pick-Up Time  : <span id='ticket_pickup_hours'></span> 
+                                                         <span id='ticket_pickup_minutes'></span>
+                                                         <span id='ticket_pickup_meridiem'></span></li>
+               
+            </ul>
+            </div>
+        </div>     
                 <a href="https://paystack.com/pay/flybetabook" class="btn btn--white">Book now</a>
               </div>
             </div>
