@@ -18,9 +18,9 @@ const classType = selector('#classType');
 //SUBMIT FORM
 flightForm.addEventListener('submit', (e)=>{
   e.preventDefault();
-  //store data in sessionStorage as an object in an array
+  //store data in localStorage as an object in an array
 
-  sessionStorage.setItem('flightData', JSON.stringify([{
+  localStorage.setItem('flightData', JSON.stringify([{
    adult:adult.options[adult.selectedIndex].value,
     children:children.options[children.selectedIndex].value,
     classtype:classType.options[classType.selectedIndex].value, 
@@ -39,9 +39,16 @@ flightForm.addEventListener('submit', (e)=>{
   //   children.options[children.selectedIndex].value,
   //   classType.options[classType.selectedIndex].value
   // )
-
-  console.log(JSON.parse(sessionStorage.getItem('flightData')))
+ 
+  
+ console.log(JSON.parse(localStorage.getItem('flightData')))
 })
+let data_form = JSON.parse(localStorage.getItem('flightData'))
+console.log(data_form[0].origin) 
+console.log(data_form[0].destination) 
+console.log(data_form[0].departingDate) 
+console.log(data_form[0].returningDate) 
+
 
 // FORM FOR HOTEL
 const hotelForm = selector("#hotelForm");
@@ -57,8 +64,6 @@ const check_out_date = selector("#check_out_date");
 // const radio_three = selector("#radio_three");
 // const nationality = selector("#nationality");
 let checkBox  = [...document.querySelectorAll('input[type="radio"]')] 
-  console.log('hello')
-  console.log(checkBox);
 hotelForm.addEventListener('submit', (e)=>{
       e.preventDefault();
 //display value of checked checkbox
@@ -74,8 +79,8 @@ function checkboxChecked(boxArray) {
   return checked;
 }
      
-      // storage of data in sessionStorage
-      sessionStorage.setItem('hotelForm', JSON.stringify ([{
+      // storage of data in localStorage
+      localStorage.setItem('hotelForm', JSON.stringify ([{
         
             checkradio:checkboxChecked(checkBox),
          hotel_destination:hotel_destination.value,
@@ -85,7 +90,7 @@ function checkboxChecked(boxArray) {
          nationality: nationality.options[nationality.selectedIndex].value
       }]))
 
-  console.log(JSON.parse(sessionStorage.getItem('hotelForm')))
+  console.log(JSON.parse(localStorage.getItem('hotelForm')))
 })
 
 // FORM FOR RIDE
@@ -102,10 +107,9 @@ const returnTrip_date = selector('#returnTrip_date');
 const pickup_hours = selector('#pickup_hours');
 const pickup_minutes = selector('#pickup_minutes');
 const pickup_meridiem = selector('#pickup_meridiem');
-
 carForm.addEventListener('submit', (e)=>{
     e.preventDefault();
-    sessionStorage.setItem('carForm', JSON.stringify ([{
+    localStorage.setItem('carForm', JSON.stringify ([{
           travel_type: travel_type.options[travel_type.selectedIndex].value,
           source_city: source_city.value,
           destination_city: destination_city.value,
@@ -113,32 +117,44 @@ carForm.addEventListener('submit', (e)=>{
           pick_minutes  : pickup_minutes.value,
           pickup_meridiem:pickup_meridiem.value,
           multiCity_trip_date_1:multiCity_trip_date_1.value,
-          multiCity_trip_date_1: multiCity_trip_date_1.value,
+          multiCity_trip_date_2: multiCity_trip_date_2.value,
           one_way_trip_date: one_way_trip_date.value,
           round_trip_date: round_trip_date.value,
           returnTrip_date: returnTrip_date.value
+          
+
     }]))
 
 
-console.log(JSON.parse(sessionStorage.getItem('carForm')))
+console.log(JSON.parse(localStorage.getItem('carForm')))
   })
-
+// console.log(localStorage.getItem())
   //  FORM OF BUS
-  const busForm = selector('#busForm');
+//   const busForm = selector('#busForm');
 
 
-  const bus_departure = selector('#bus_departure');
-  const bus_destination = selector('#bus_destination');
-  const departing = selector('#departing');
+//   const bus_departure = selector('#bus_departure');
+//   const bus_destination = selector('#bus_destination');
+//   const departing = selector('#departing');
 
-  busForm.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    sessionStorage.setItem('busForm', JSON.stringify ([{
-     bus_departure: bus_departure.value,
-     bus_destination: bus_destination.value,
-     departing: departing.value
-}]))
+//   busForm.addEventListener('submit', (e)=>{
+//     e.preventDefault();
+//     localStorage.setItem('busForm', JSON.stringify ([{
+//      bus_departure: bus_departure.value,
+//      bus_destination: bus_destination.value,
+//      departing: departing.value
+// }]))
 
 
-console.log(JSON.parse(sessionStorage.getItem('busForm')))
-  })
+// console.log(JSON.parse(localStorage.getItem('busForm')))
+//   })
+
+selector('#ticket_text').innerHTML = data_form[0].origin;
+  
+// let message = ticket_text.innerHTML;
+
+
+
+
+  // const pop_text = selector('.popup__text')
+  // pop_text.innerHTML = source_city.value;
