@@ -1,6 +1,4 @@
-$(document).ready(function () {
-
-        
+$(document).ready(function () {     
     $("#signup-btn").on("click", function(e) {
         e.preventDefault()
         var $user = $("#username").val();
@@ -9,8 +7,6 @@ $(document).ready(function () {
             alert("please fill all field");
             //return;
         }
-        
-        
         console.log(password);
         $.ajax({
             method: "GET",
@@ -23,7 +19,6 @@ $(document).ready(function () {
                     }
                 }
             }
-            
             $("#error").show();
         });  
     });
