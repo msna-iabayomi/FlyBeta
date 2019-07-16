@@ -111,734 +111,791 @@
                         <div class="tab-content card">
 
                             <!--Panel 1-->
-                            <div class="tab-pane fade in active show" id="panel1011" role="tabpanel" style=" padding: 20px;">
-                                <form class="ng-pristine ng-valid ng-valid-pattern ng-valid-maxlength" id="flightForm">
-                                  <ul class="nav nav-tab md-tabs" id="one_wayANDround_trip">
-                                      <li class="nav-item">
-                                          <a class="nav-link black-text waves-effect waves-light active show" data-toggle="tab" href="#panel1" role="tab" id="one_way">One Way</a>
-                                      </li>
-                                      <li class="nav-item">
-                                          <a class="nav-link waves-light black-text waves-effect waves-light" data-toggle="tab" href="#panel2" role="tab" id="round_trip">Round Trip</a>
-                                      </li>
-                                    
-                                  </ul>
-                                    <div class="row panel1011_firstDiv">
-                                        <div class="col-md-3">
-                                            <label class="black-text active">Origin</label>
-                                            <input type="text" id="originFrom" class="form-control" placeholder="City, Airport" required> 
-                                        </div>
-                                        <div class="col-md-2">
-                                        <label class="black-text">Destination</label>
+                            <div class="tab-pane fade in active show" id="panel1011" role="tabpanel"
+                              style=" padding: 20px;">
+                              <form class="ng-pristine ng-valid ng-valid-pattern ng-valid-maxlength" id="flightForm">
+                                <ul class="nav nav-tab md-tabs" id="one_wayANDround_trip">
+                                  <li class="nav-item">
+                                    <a class="nav-link black-text waves-effect waves-light active show"
+                                      data-toggle="tab" href="#panel1" role="tab" id="one_way">One Way</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link waves-light black-text waves-effect waves-light"
+                                      data-toggle="tab" href="#panel2" role="tab" id="round_trip">Round Trip</a>
+                                  </li>
 
-                                        <input type="text" id="destinationTo" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" placeholder="City, Airport" required> 
-                                        </div>
-                                        <div class="col-md-3">
+                                </ul>
+                                <div class="row panel1011_firstDiv">
+                                  <div class="col-md-3">
+                                    <label class="black-text active">Origin</label>
+                                    <input type="text" id="originFrom" class="form-control" placeholder="City, Airport"
+                                      required>
+                                  </div>
+                                  <div class="col-md-2">
+                                    <label class="black-text">Destination</label>
 
-                                        <label class="black-text">Departing</label>
-                                        <input placeholder="Selected date" type="date" id="departing-date-picker" class="form-control datepicker" style="padding: 5px 0 5px 12px;">
+                                    <input type="text" id="destinationTo"
+                                      class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"
+                                      placeholder="City, Airport" required>
+                                  </div>
+                                  <div class="col-md-3">
 
-                                        </div>
-                                        <div class="tab-content">
-                                  
-                    <div class="tab-pane fade" id="panel2" role="tabpanel">
-                      <div class="float-left">
-                                            <label class="black-text active">Returning</label>
+                                    <label class="black-text">Departing</label>
+                                    <input placeholder="Selected date" type="date" id="departing-date-picker"
+                                      class="form-control datepicker" style="padding: 5px 0 5px 12px;">
 
-                                          <input placeholder="Selected date" type="date" id="returning-date-picker" class="form-control datepicker" style="padding: 5px 0 5px 12px;">
-                                        </div>
-                          </div>
-                                      
-                      </div>
+                                  </div>
+                                  <div class="tab-content">
+
+                                    <div class="tab-pane fade" id="panel2" role="tabpanel">
+                                      <div class="float-left">
+                                        <label class="black-text active">Returning</label>
+
+                                        <input placeholder="Selected date" type="date" id="returning-date-picker"
+                                          class="form-control datepicker" style="padding: 5px 0 5px 12px;">
+                                      </div>
                                     </div>
-                    <div class="row belowDiv">
 
-                                        <div class="col-md-3" style="padding-left: 3px;    padding-right: 5px;">
-                                            <label class="black-text active">Adults</label>
-                                            <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty" autocomplete="on" style=" border: 1px solid #ced4da;
+                                  </div>
+                                </div>
+                                <div class="row belowDiv">
+
+                                  <div class="col-md-3" style="padding-left: 3px;    padding-right: 5px;">
+                                    <label class="black-text active">Adults</label>
+                                    <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty"
+                                      autocomplete="on" style=" border: 1px solid #ced4da;
                                                     border-radius: .25rem; 
                                                     height: 40px;" id="adultNumber">
-                                                <option selected="selected" >
-                                                  0
-                                                </option>
-                                                <option>
-                                                    1
-                                                </option>
-                                                <option>
-                                                    2
-                                                </option>
-                                                <option>
-                                                  3
-                                                </option>
-                                                <option>
-                                                  4
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-2" style="padding-left: 5px; padding-right: 5px;">
-                                            <label class="black-text">Children</label>
-                                            <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty" autocomplete="on" style=" border: 1px solid #ced4da;
+                                      <option selected="selected">
+                                        0
+                                      </option>
+                                      <option>
+                                        1
+                                      </option>
+                                      <option>
+                                        2
+                                      </option>
+                                      <option>
+                                        3
+                                      </option>
+                                      <option>
+                                        4
+                                      </option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-2" style="padding-left: 5px; padding-right: 5px;">
+                                    <label class="black-text">Children</label>
+                                    <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty"
+                                      autocomplete="on" style=" border: 1px solid #ced4da;
                                                     border-radius: .25rem;
                                                     height: 40px;" id="childrenNumber">
-                                                <option selected="selected" >0</option>
-                                                <option>
-                                                  1
-                                                </option>
-                                                <option>
-                                                    2
-                                                </option>
-                                                <option>
-                                                    3
-                                                </option>
-                                                <option>
-                                                    4
-                                                </option>
-                                                <option>
-                                                  5
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-2" style="padding-left: 5px; padding-right: 0px;">
-                                            <label class="black-text active classtype_text" >Class Type</label>
-                 <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty" autocomplete="on" style=" border: 1px solid #ced4da;
+                                      <option selected="selected">0</option>
+                                      <option>
+                                        1
+                                      </option>
+                                      <option>
+                                        2
+                                      </option>
+                                      <option>
+                                        3
+                                      </option>
+                                      <option>
+                                        4
+                                      </option>
+                                      <option>
+                                        5
+                                      </option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-2" style="padding-left: 5px; padding-right: 0px;">
+                                    <label class="black-text active classtype_text">Class Type</label>
+                                    <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty"
+                                      autocomplete="on" style=" border: 1px solid #ced4da;
                                                     border-radius: .25rem;
                                                     height: 40px;" id="classType">
-                                                <option selected="selected" >
-                                                  First Class
-                                                </option> 
-                                                <option>
-                                                  Business First Class
-                                                </option>
-                                                <option>
-                                                  Economy Class
-                                                </option>
-                                              
-                                            </select>
-                                        </div>
-                                        <div class="col-12">
-                                            
-                                            <button class="btn btn-warning waves-effect waves-light mt-4" id="flight_saveAndBook">Save and Book Hotel</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            
+                                      <option selected="selected">
+                                        First Class
+                                      </option>
+                                      <option>
+                                        Business First Class
+                                      </option>
+                                      <option>
+                                        Economy Class
+                                      </option>
+
+                                    </select>
+                                  </div>
+                                  <div class="col-12">
+
+                                    <button class="btn btn-warning waves-effect waves-light mt-4"
+                                      id="flight_saveAndBook">Save and Book Hotel</button>
+                                  </div>
+                                </div>
+                              </form>
+
                             </div>
                             <!--/.Panel 1-->
 
                             <!--Panel 2-->
-                            <div class="tab-pane fade" id="panel1012" role="tabpanel" style=" padding: 20px;">
-                                <form class="ng-pristine ng-valid ng-valid-maxlength" id='hotelForm'> 
-                  <ul class="nav nav-tab md-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link black-text waves-effect waves-light active show" data-toggle="tab" href="#panel1" role="tab">Domestic Hotel</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link waves-light black-text waves-effect waves-light" data-toggle="tab" href="#panel2" role="tab">International Hotels</a>
-                    </li>
-      
-                  </ul>
-                                    <div class="row">
-                                        <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
-                                            <label class="black-text">Where are you going?</label>
+                           <div class="tab-pane fade" id="panel1012" role="tabpanel" style=" padding: 20px;">
+                             <form class="ng-pristine ng-valid ng-valid-maxlength" id='hotelForm'>
+                               <ul class="nav nav-tab md-tabs">
+                                 <li class="nav-item">
+                                   <a class="nav-link black-text waves-effect waves-light active show" data-toggle="tab"
+                                     href="#panel1" role="tab">Domestic Hotel</a>
+                                 </li>
+                                 <li class="nav-item">
+                                   <a class="nav-link waves-light black-text waves-effect waves-light" data-toggle="tab"
+                                     href="#panel2" role="tab">International Hotels</a>
+                                 </li>
 
-                                            <input type="text"  id="hotel_destination" class="form-control" placeholder="City" required>
-                                            
-                                        </div>
-                                        <div class="col-md-3" style="padding-left: 3px;    padding-right: 5px;">
+                               </ul>
+                               <div class="row">
+                                 <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
+                                   <label class="black-text">Where are you going?</label>
 
-                                            <label class="black-text active">Hotel Preference</label>
-                                            <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty" style=" border: 1px solid #ced4da;
+                                   <input type="text" id="hotel_destination" class="form-control" placeholder="City"
+                                     required>
+
+                                 </div>
+                                 <div class="col-md-3" style="padding-left: 3px;    padding-right: 5px;">
+
+                                   <label class="black-text active">Hotel Preference</label>
+                                   <select class="mdb-select ng-pristine ng-untouched ng-valid ng-empty" style=" border: 1px solid #ced4da;
                                                     border-radius: .25rem;   width: 100%;
-                                                    height: 40px;" name="mobile_operator" id="hotel_preference"><option value="? undefined:undefined ?" selected="selected"></option>
-                                                <!-- ngRepeat: dth in myData2 -->
-                          <option ng-repeat="dth in myData2" ng-selected="goperator === operator.id"  selected="selected">
-                                                    All
-                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id"  selected="selected">
-                                                    5
-                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id" selected="selected">
-                                                  4
-                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id"  selected="selected">
-                                                  3
-                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id">
-                                                  2
-                                                </option><!-- end ngRepeat: dth in myData2 -->
-                                            </select>
-                                        </div>
+                                                    height: 40px;" name="mobile_operator" id="hotel_preference">
+                                     <option value="? undefined:undefined ?" selected="selected"></option>
+                                     <!-- ngRepeat: dth in myData2 -->
+                                     <option ng-repeat="dth in myData2" ng-selected="goperator === operator.id"
+                                       selected="selected">
+                                       All
+                                     </option><!-- end ngRepeat: dth in myData2 -->
+                                     <option ng-repeat="dth in myData2" ng-selected="goperator === operator.id"
+                                       selected="selected">
+                                       5
+                                     </option><!-- end ngRepeat: dth in myData2 -->
+                                     <option ng-repeat="dth in myData2" ng-selected="goperator === operator.id"
+                                       selected="selected">
+                                       4
+                                     </option><!-- end ngRepeat: dth in myData2 -->
+                                     <option ng-repeat="dth in myData2" ng-selected="goperator === operator.id"
+                                       selected="selected">
+                                       3
+                                     </option><!-- end ngRepeat: dth in myData2 -->
+                                     <option ng-repeat="dth in myData2" ng-selected="goperator === operator.id">
+                                       2
+                                     </option><!-- end ngRepeat: dth in myData2 -->
+                                   </select>
+                                 </div>
 
 
 
-                                        <div class="col-md-3" style="padding-left: 5px;    padding-right: 0px;">
-                                            <label class="black-text active">
-    Check-in</label>
+                                 <div class="col-md-3" style="padding-left: 5px;    padding-right: 0px;">
+                                   <label class="black-text active">
+                                     Check-in</label>
 
-                                            <input placeholder="Selected date" type="date" id="check_in_date" class="form-control datepicker">
-                                        </div>
-                      <div class="col-md-3" style="padding-left: 5px;    padding-right: 0px;">
-                                            <label class="black-text active">
-    Check-Out</label>
+                                   <input placeholder="Selected date" type="date" id="check_in_date"
+                                     class="form-control datepicker">
+                                 </div>
+                                 <div class="col-md-3" style="padding-left: 5px;    padding-right: 0px;">
+                                   <label class="black-text active">
+                                     Check-Out</label>
 
-                                            <input placeholder="Selected date" type="date" id="check_out_date" class="form-control datepicker">
-                                        </div>
-          
-                                    </div>
-                      <div class="row">
-                                        <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
-                                            <label class="black-text">Room</label><br>
+                                   <input placeholder="Selected date" type="date" id="check_out_date"
+                                     class="form-control datepicker">
+                                 </div>
 
-                                          <!-- Default inline 1-->
-    <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" class="custom-control-input" value="1" id="defaultInline1" name="inlineDefaultRadiosExample">
-      <label class="custom-control-label orange-text" for="defaultInline1">1</label>
-    </div>
+                               </div>
+                               <div class="row">
+                                 <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
+                                   <label class="black-text">Room</label><br>
 
-    <!-- Default inline 2-->
-    <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" class="custom-control-input"  value="2" id="defaultInline2" name="inlineDefaultRadiosExample">
-      <label class="custom-control-label orange-text" for="defaultInline2">2</label>
-    </div>
+                                   <!-- Default inline 1-->
+                                   <div class="custom-control custom-radio custom-control-inline">
+                                     <input type="radio" class="custom-control-input" value="1" id="defaultInline1"
+                                       name="inlineDefaultRadiosExample">
+                                     <label class="custom-control-label orange-text" for="defaultInline1">1</label>
+                                   </div>
 
-    <!-- Default inline 3-->
-    <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" class="custom-control-input"  value="3" id="defaultInline3" name="inlineDefaultRadiosExample">
-      <label class="custom-control-label orange-text" for="defaultInline3">3</label>
-    </div>
-                                            
-      </div>
-          <div class="col-md-3" style="padding-left: 3px;    padding-right: 5px;">
+                                   <!-- Default inline 2-->
+                                   <div class="custom-control custom-radio custom-control-inline">
+                                     <input type="radio" class="custom-control-input" value="2" id="defaultInline2"
+                                       name="inlineDefaultRadiosExample">
+                                     <label class="custom-control-label orange-text" for="defaultInline2">2</label>
+                                   </div>
 
-              <label class="black-text active">Nationality</label>
-              <select name="nationality" id="nationality" class="form-control">
-              <option value="AF">Afghan</option>
-              <option value="AL">Albanian</option>
-              <option value="DZ">Algerian</option>
-              <option value="AS">American Samoan</option>
-              <option value="US">American; US citizen</option>
-              <option value="AD">Andorran</option>
-              <option value="AO">Angolan</option>
-              <option value="AI">Anguillan</option>
-              <option value="AQ">Antarctica</option>
-              <option value="AG">Antiguan; Barbudian</option>
-              <option value="AN">Antillean</option>
-              <option value="AR">Argentinian</option>
-              <option value="AM">Armenian</option>
-              <option value="AW">Aruban</option>
-              <option value="AU">Australian</option>
-              <option value="AT">Austrian</option>
-              <option value="AZ">Azerbaijani</option>
-              <option value="BS">Bahamian</option>
-              <option value="BH">Bahraini</option>
-              <option value="BD">Bangladeshi</option>
-              <option value="BB">Barbadian</option>
-              <option value="LS">Basotho</option>
-              <option value="BY">Belarusian</option>
-              <option value="BE">Belgian</option>
-              <option value="BZ">Belizean</option>
-              <option value="BJ">Beninese</option>
-              <option value="BM">Bermudian</option>
-              <option value="BT">Bhutanese</option>
-              <option value="BO">Bolivian</option>
-              <option value="BW">Botswanan</option>
-              <option value="BV">Bouvet Islands</option>
-              <option value="BR">Brazilian</option>
-              <option value="IO">British Indian Ocean Territory</option>
-              <option value="VG">British Virgin Islander; BV Islander</option>
-              <option value="BN">Bruneian</option>
-              <option value="BG">Bulgarian</option>
-              <option value="BF">Burkinabe</option>
-              <option value="MM">Burmese</option>
-              <option value="BI">Burundian</option>
-              <option value="KH">Cambodian</option>
-              <option value="CM">Cameroonian</option>
-              <option value="CB">Canada Buffer</option>
-              <option value="CA">Canadian</option>
-              <option value="CV">Cape Verdean</option>
-              <option value="KY">Caymanian</option>
-              <option value="CF">Central African</option>
-              <option value="TD">Chadian</option>
-              <option value="CL">Chilean</option>
-              <option value="CN">Chinese</option>
-              <option value="CX">Christmas Islander</option>
-              <option value="AE">Emirati</option>
-              <option value="GQ">Equatorial Guinean</option>
-              <option value="ER">Eritrean</option>
-              <option value="EE">Estonian</option>
-              <option value="ET">Ethiopian</option>
-              <option value="EU">European Monetary Union</option>
-              <option value="FO">Faeroese</option>
-              <option value="FK">Falkland Islander</option>
-              <option value="FJ">Fiji Islander</option>
-              <option value="PH">Filipino</option>
-              <option value="FI">Finn</option>
-              <option value="TF">French Southern Territories</option>
-              <option value="FR">Frenchman; Frenchwoman</option>
-              <option value="GA">Gabonese</option>
-              <option value="GM">Gambian</option>
-              <option value="GE">Georgian</option>
-              <option value="DE">German</option>
-              <option value="GH">Ghanaian</option>
-              <option value="GI">Gibraltarian</option>
-              <option value="GR">Greece</option>
-              <option value="GL">Greenlander</option>
-              <option value="GD">Grenadian</option>
-              <option value="GP">Guadeloupean</option>
-              <option value="GU">Guamanian</option>
-              <option value="GT">Guatemalan</option>
-              <option value="GF">Guianese</option>
-              <option value="GW">Guinea-Bissau national</option>
-              <option value="GN">Guinean</option>
-              <option value="GY">Guyanese</option>
-              <option value="HT">Haitian</option>
-              <option value="HM">Heard &amp; Mcdonald Islands</option>
-              <option value="HN">Honduran</option>
-              <option value="HK">Hong Kong Chinese</option>
-              <option value="HU">Hungarian</option>
-              <option value="IS">Icelander</option>
-              <option value="IN" selected="selected">Indian</option>
-              <option value="ID">Indonesian</option>
-              <option value="IR">Iranian</option>
-              <option value="IQ">Iraqi</option>
-              <option value="IE">Irishman; Irishwoman</option>
-              <option value="IL">Israeli</option>
-              <option value="IT">Italian</option>
-              <option value="CI">Ivorian</option>
-              <option value="JM">Jamaican</option>
-              <option value="JP">Japanese</option>
-              <option value="JO">Jordanian</option>
-              <option value="KZ">Kazakh</option>
-              <option value="KE">Kenyan</option>
-              <option value="KI">Kiribatian</option>
-              <option value="KN">Kittsian; Nevisian</option>
-              <option value="KW">Kuwaiti</option>
-              <option value="KG">Kyrgyz</option>
-              <option value="LA">Lao</option>
-              <option value="LV">Latvian</option>
-              <option value="LB">Lebanese</option>
-              <option value="LR">Liberian</option>
-              <option value="LY">Libyan</option>
-              <option value="LI">Liechtensteiner</option>
-              <option value="QL">Lithuania (Dummy Code)</option>
-              <option value="LT">Lithuanian</option>
-              <option value="LU">Luxembourger</option>
-              <option value="MO">Macanese</option>
-              <option value="MK">Macedonia</option>
-              <option value="YT">Mahorais</option>
-              <option value="MG">Malagasy</option>
-              <option value="MW">Malawian</option>
-              <option value="MY">Malaysian</option>
-              <option value="MV">Maldivian</option>
-              <option value="ML">Malian</option>
-              <option value="MT">Maltese</option>
-              <option value="MH">Marshallese</option>
-              <option value="MQ">Martinican</option>
-              <option value="MR">Mauritanian</option>
-              <option value="MU">Mauritian</option>
-              <option value="MX">Mexican</option>
-              <option value="MB">Mexico Buffer</option>
-              <option value="FM">Micronesian</option>
-              <option value="MD">Moldovan</option>
-              <option value="MC">Monegasque</option>
-              <option value="MN">Mongolian</option>
-              <option value="MS">Montserratian</option>
-              <option value="MA">Moroccan</option>
-              <option value="MZ">Mozambican</option>
-              <option value="NA">Namibian</option>
-              <option value="NR">Nauruan</option>
-              <option value="NP">Nepalese</option>
-              <option value="NC">New Caledonian</option>
-              <option value="NZ">New Zealander</option>
-              <option value="NI">Nicaraguan</option>
-              <option value="NG">Nigerian</option>
-              <option value="NE">Nigerien</option>
-              <option value="NU">Niuean</option>
-              <option value="NF">Norfolk Islander</option>
-              <option value="KP">North Korean</option>
-              <option value="MP">Northern Mariana Islander</option>
-              <option value="NO">Norwegian</option>
-              <option value="LC">Saint Lucian</option>
-              <option value="SV">Salvadorian; Salvadoran</option>
-              <option value="WS">Samoan</option>
-              <option value="SM">San Marinese</option>
-              <option value="ST">Sao Tomean</option>
-              <option value="SA">Saudi Arabian</option>
-              <option value="SN">Senegalese</option>
-              <option value="RS">Serbian</option>
-              <option value="SC">Seychellois</option>
-              <option value="SL">Sierra Leonean</option>
-              <option value="SG">Singaporean</option>
-              <option value="SK">Slovak</option>
-              <option value="SI">Slovene</option>
-              <option value="SB">Solomon Islander</option>
-              <option value="SO">Somali</option>
-              <option value="ZA">South African</option>
-              <option value="GS">South Georgia &amp; South Sandwich</option>
-              <option value="KR">South Korean</option>
-              <option value="SU">Soviet Union</option>
-              <option value="ES">Spaniard</option>
-              <option value="LK">Sri Lankan</option>
-              <option value="PM">St-Pierrais; Miquelonnais</option>
-              <option value="SD">Sudanese</option>
-              <option value="SR">Surinamer</option>
-              <option value="SJ">Svalbard &amp; Jan Mayen Islands</option>
-              <option value="SZ">Swazi</option>
-              <option value="SE">Swede</option>
-              <option value="CH">Swiss</option>
-              <option value="SY">Syrian</option>
-              <option value="TW">Taiwanese</option>
-              <option value="TJ">Tajik</option>
-              <option value="TZ">Tanzanian</option>
-              <option value="TH">Thai</option>
-              <option value="TG">Togolese</option>
-              <option value="TK">Tokelauan</option>
-              <option value="TO">Tongan</option>
-              <option value="TT">Trinidadian; Tobagonian</option>
-              <option value="TN">Tunisian</option>
-              <option value="TR">Turk</option>
-              <option value="TM">Turkmen</option>
-              <option value="TC">Turks and Caicos Islander</option>
-              <option value="TV">Tuvaluan</option>
-              <option value="UM">U.S. Minor Outlaying Islands</option>
-              <option value="UG">Ugandan</option>
-              <option value="UA">Ukrainian</option>
-              <option value="GB">United Kingdom</option>
-              <option value="UY">Uruguayan</option>
-              <option value="VI">US Virgin Islander</option>
-              <option value="UZ">Uzbek</option>
-              <option value="VU">Vanuatuan</option>
-            </select>
-          </div>
+                                   <!-- Default inline 3-->
+                                   <div class="custom-control custom-radio custom-control-inline">
+                                     <input type="radio" class="custom-control-input" value="3" id="defaultInline3"
+                                       name="inlineDefaultRadiosExample">
+                                     <label class="custom-control-label orange-text" for="defaultInline3">3</label>
+                                   </div>
 
-          <div class="col-md-2" style="padding-left: 5px;    padding-right: 0px;">
-              
-          </div>
-    <div class="col-md-1" style="padding-left: 5px;    padding-right: 0px;">
-              
-      </div>
-            <div class="col-md-3">
-              <button href class="btn btn-warning waves-effect waves-light mt-4">Save and Book Hotel</button>
+                                 </div>
+                                 <div class="col-md-3" style="padding-left: 3px;    padding-right: 5px;">
 
-                                        </div>
-                                    </div>
-                                </form>
+                                   <label class="black-text active">Nationality</label>
+                                   <select name="nationality" id="nationality" class="form-control">
+                                     <option value="AF">Afghan</option>
+                                     <option value="AL">Albanian</option>
+                                     <option value="DZ">Algerian</option>
+                                     <option value="AS">American Samoan</option>
+                                     <option value="US">American; US citizen</option>
+                                     <option value="AD">Andorran</option>
+                                     <option value="AO">Angolan</option>
+                                     <option value="AI">Anguillan</option>
+                                     <option value="AQ">Antarctica</option>
+                                     <option value="AG">Antiguan; Barbudian</option>
+                                     <option value="AN">Antillean</option>
+                                     <option value="AR">Argentinian</option>
+                                     <option value="AM">Armenian</option>
+                                     <option value="AW">Aruban</option>
+                                     <option value="AU">Australian</option>
+                                     <option value="AT">Austrian</option>
+                                     <option value="AZ">Azerbaijani</option>
+                                     <option value="BS">Bahamian</option>
+                                     <option value="BH">Bahraini</option>
+                                     <option value="BD">Bangladeshi</option>
+                                     <option value="BB">Barbadian</option>
+                                     <option value="LS">Basotho</option>
+                                     <option value="BY">Belarusian</option>
+                                     <option value="BE">Belgian</option>
+                                     <option value="BZ">Belizean</option>
+                                     <option value="BJ">Beninese</option>
+                                     <option value="BM">Bermudian</option>
+                                     <option value="BT">Bhutanese</option>
+                                     <option value="BO">Bolivian</option>
+                                     <option value="BW">Botswanan</option>
+                                     <option value="BV">Bouvet Islands</option>
+                                     <option value="BR">Brazilian</option>
+                                     <option value="IO">British Indian Ocean Territory</option>
+                                     <option value="VG">British Virgin Islander; BV Islander</option>
+                                     <option value="BN">Bruneian</option>
+                                     <option value="BG">Bulgarian</option>
+                                     <option value="BF">Burkinabe</option>
+                                     <option value="MM">Burmese</option>
+                                     <option value="BI">Burundian</option>
+                                     <option value="KH">Cambodian</option>
+                                     <option value="CM">Cameroonian</option>
+                                     <option value="CB">Canada Buffer</option>
+                                     <option value="CA">Canadian</option>
+                                     <option value="CV">Cape Verdean</option>
+                                     <option value="KY">Caymanian</option>
+                                     <option value="CF">Central African</option>
+                                     <option value="TD">Chadian</option>
+                                     <option value="CL">Chilean</option>
+                                     <option value="CN">Chinese</option>
+                                     <option value="CX">Christmas Islander</option>
+                                     <option value="AE">Emirati</option>
+                                     <option value="GQ">Equatorial Guinean</option>
+                                     <option value="ER">Eritrean</option>
+                                     <option value="EE">Estonian</option>
+                                     <option value="ET">Ethiopian</option>
+                                     <option value="EU">European Monetary Union</option>
+                                     <option value="FO">Faeroese</option>
+                                     <option value="FK">Falkland Islander</option>
+                                     <option value="FJ">Fiji Islander</option>
+                                     <option value="PH">Filipino</option>
+                                     <option value="FI">Finn</option>
+                                     <option value="TF">French Southern Territories</option>
+                                     <option value="FR">Frenchman; Frenchwoman</option>
+                                     <option value="GA">Gabonese</option>
+                                     <option value="GM">Gambian</option>
+                                     <option value="GE">Georgian</option>
+                                     <option value="DE">German</option>
+                                     <option value="GH">Ghanaian</option>
+                                     <option value="GI">Gibraltarian</option>
+                                     <option value="GR">Greece</option>
+                                     <option value="GL">Greenlander</option>
+                                     <option value="GD">Grenadian</option>
+                                     <option value="GP">Guadeloupean</option>
+                                     <option value="GU">Guamanian</option>
+                                     <option value="GT">Guatemalan</option>
+                                     <option value="GF">Guianese</option>
+                                     <option value="GW">Guinea-Bissau national</option>
+                                     <option value="GN">Guinean</option>
+                                     <option value="GY">Guyanese</option>
+                                     <option value="HT">Haitian</option>
+                                     <option value="HM">Heard &amp; Mcdonald Islands</option>
+                                     <option value="HN">Honduran</option>
+                                     <option value="HK">Hong Kong Chinese</option>
+                                     <option value="HU">Hungarian</option>
+                                     <option value="IS">Icelander</option>
+                                     <option value="IN" >Indian</option>
+                                     <option value="ID">Indonesian</option>
+                                     <option value="IR">Iranian</option>
+                                     <option value="IQ">Iraqi</option>
+                                     <option value="IE">Irishman; Irishwoman</option>
+                                     <option value="IL">Israeli</option>
+                                     <option value="IT">Italian</option>
+                                     <option value="CI">Ivorian</option>
+                                     <option value="JM">Jamaican</option>
+                                     <option value="JP">Japanese</option>
+                                     <option value="JO">Jordanian</option>
+                                     <option value="KZ">Kazakh</option>
+                                     <option value="KE">Kenyan</option>
+                                     <option value="KI">Kiribatian</option>
+                                     <option value="KN">Kittsian; Nevisian</option>
+                                     <option value="KW">Kuwaiti</option>
+                                     <option value="KG">Kyrgyz</option>
+                                     <option value="LA">Lao</option>
+                                     <option value="LV">Latvian</option>
+                                     <option value="LB">Lebanese</option>
+                                     <option value="LR">Liberian</option>
+                                     <option value="LY">Libyan</option>
+                                     <option value="LI">Liechtensteiner</option>
+                                     <option value="QL">Lithuania (Dummy Code)</option>
+                                     <option value="LT">Lithuanian</option>
+                                     <option value="LU">Luxembourger</option>
+                                     <option value="MO">Macanese</option>
+                                     <option value="MK">Macedonia</option>
+                                     <option value="YT">Mahorais</option>
+                                     <option value="MG">Malagasy</option>
+                                     <option value="MW">Malawian</option>
+                                     <option value="MY">Malaysian</option>
+                                     <option value="MV">Maldivian</option>
+                                     <option value="ML">Malian</option>
+                                     <option value="MT">Maltese</option>
+                                     <option value="MH">Marshallese</option>
+                                     <option value="MQ">Martinican</option>
+                                     <option value="MR">Mauritanian</option>
+                                     <option value="MU">Mauritian</option>
+                                     <option value="MX">Mexican</option>
+                                     <option value="MB">Mexico Buffer</option>
+                                     <option value="FM">Micronesian</option>
+                                     <option value="MD">Moldovan</option>
+                                     <option value="MC">Monegasque</option>
+                                     <option value="MN">Mongolian</option>
+                                     <option value="MS">Montserratian</option>
+                                     <option value="MA">Moroccan</option>
+                                     <option value="MZ">Mozambican</option>
+                                     <option value="NA">Namibian</option>
+                                     <option value="NR">Nauruan</option>
+                                     <option value="NP">Nepalese</option>
+                                     <option value="NC">New Caledonian</option>
+                                     <option value="NZ">New Zealander</option>
+                                     <option value="NI">Nicaraguan</option>
+                                     <option value="NG" selected="selected">Nigerian</option>
+                                     <option value="NE">Nigerien</option>
+                                     <option value="NU">Niuean</option>
+                                     <option value="NF">Norfolk Islander</option>
+                                     <option value="KP">North Korean</option>
+                                     <option value="MP">Northern Mariana Islander</option>
+                                     <option value="NO">Norwegian</option>
+                                     <option value="LC">Saint Lucian</option>
+                                     <option value="SV">Salvadorian; Salvadoran</option>
+                                     <option value="WS">Samoan</option>
+                                     <option value="SM">San Marinese</option>
+                                     <option value="ST">Sao Tomean</option>
+                                     <option value="SA">Saudi Arabian</option>
+                                     <option value="SN">Senegalese</option>
+                                     <option value="RS">Serbian</option>
+                                     <option value="SC">Seychellois</option>
+                                     <option value="SL">Sierra Leonean</option>
+                                     <option value="SG">Singaporean</option>
+                                     <option value="SK">Slovak</option>
+                                     <option value="SI">Slovene</option>
+                                     <option value="SB">Solomon Islander</option>
+                                     <option value="SO">Somali</option>
+                                     <option value="ZA">South African</option>
+                                     <option value="GS">South Georgia &amp; South Sandwich</option>
+                                     <option value="KR">South Korean</option>
+                                     <option value="SU">Soviet Union</option>
+                                     <option value="ES">Spaniard</option>
+                                     <option value="LK">Sri Lankan</option>
+                                     <option value="PM">St-Pierrais; Miquelonnais</option>
+                                     <option value="SD">Sudanese</option>
+                                     <option value="SR">Surinamer</option>
+                                     <option value="SJ">Svalbard &amp; Jan Mayen Islands</option>
+                                     <option value="SZ">Swazi</option>
+                                     <option value="SE">Swede</option>
+                                     <option value="CH">Swiss</option>
+                                     <option value="SY">Syrian</option>
+                                     <option value="TW">Taiwanese</option>
+                                     <option value="TJ">Tajik</option>
+                                     <option value="TZ">Tanzanian</option>
+                                     <option value="TH">Thai</option>
+                                     <option value="TG">Togolese</option>
+                                     <option value="TK">Tokelauan</option>
+                                     <option value="TO">Tongan</option>
+                                     <option value="TT">Trinidadian; Tobagonian</option>
+                                     <option value="TN">Tunisian</option>
+                                     <option value="TR">Turk</option>
+                                     <option value="TM">Turkmen</option>
+                                     <option value="TC">Turks and Caicos Islander</option>
+                                     <option value="TV">Tuvaluan</option>
+                                     <option value="UM">U.S. Minor Outlaying Islands</option>
+                                     <option value="UG">Ugandan</option>
+                                     <option value="UA">Ukrainian</option>
+                                     <option value="GB">United Kingdom</option>
+                                     <option value="UY">Uruguayan</option>
+                                     <option value="VI">US Virgin Islander</option>
+                                     <option value="UZ">Uzbek</option>
+                                     <option value="VU">Vanuatuan</option>
+                                   </select>
+                                 </div>
 
-                            </div>
+                                 <div class="col-md-2" style="padding-left: 5px;    padding-right: 0px;">
+
+                                 </div>
+                                 <div class="col-md-1" style="padding-left: 5px;    padding-right: 0px;">
+
+                                 </div>
+                                 <div class="col-md-3">
+                                   <button href class="btn btn-warning waves-effect waves-light mt-4">Save and Book
+                                     Ride</button>
+
+                                 </div>
+                               </div>
+                             </form>
+
+                           </div>
                             <!--/.Panel 2-->
 
                             <!--Panel 3-->
                             <div class="tab-pane fade" id="panel1013" role="tabpanel" style="    padding: 20px;">
-                                <form class="ng-pristine ng-valid ng-valid-maxlength" id='carForm'>
-                                    <div class="row">
+                              <form class="ng-pristine ng-valid ng-valid-maxlength" id='carForm'>
+                                <div class="row">
 
-                                        <div class="col-md-4" style="padding-left: 5px;    padding-right: 5px;">
-                                            <label class="black-text">Travel Type</label>
+                                  <div class="col-md-4" style="padding-left: 5px;    padding-right: 5px;">
+                                    <label class="black-text">Travel Type</label>
 
-                                            <select class="form-control ng-pristine ng-valid ng-empty ng-touched ng-untouched" style=" border: 1px solid #ced4da;
+                                    <select class="form-control ng-pristine ng-valid ng-empty ng-touched ng-untouched"
+                                      style=" border: 1px solid #ced4da;
                                                     border-radius: .25rem;   width: 100%;
-                                                    height: 40px;" name="mobile_operator" id="travel_type"> 
-                                              <!-- ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id" selected="selected" ">
+                                                    height: 40px;" name="mobile_operator" id="travel_type">
+                                      <!-- ngRepeat: dth in myData2 -->
+                                      <option ng-repeat="dth in myData2" ng-selected="goperator === operator.id"
+                                        selected="selected" ">
                                                 Out Station
-                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id"  selected="selected">
-                                                    Local
-                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat="dth in myData2" ng-selected="goperator === operator.id" selected="selected">
-                                                  Transfer
-                                                </option><!-- end ngRepeat: dth in myData2 -->
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4" style="padding-left: 5px;    padding-right: 5px;">
-                        <label class="black-text">Trip Type</label>
-                                      <ul class="nav nav-tab md-tabs">
-                      
-        <li class="nav-item">
-            <a class="nav-link black-text waves-effect waves-light active show" data-toggle="tab" href="#panel3" role="tab">Round Trip</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link black-text waves-effect waves-light" data-toggle="tab" href="#panel4" role="tab">One Way</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link black-text waves-effect waves-light" data-toggle="tab" href="#panel5" role="tab">Multi City</a>
-        </li>
-      
-    </ul>   </div>
+                                                </option><!-- end ngRepeat: dth in myData2 --><option ng-repeat=" dth
+                                        in myData2" ng-selected="goperator === operator.id" selected="selected">
+                                        Local
+                                      </option><!-- end ngRepeat: dth in myData2 -->
+                                      <option ng-repeat="dth in myData2" ng-selected="goperator === operator.id"
+                                        selected="selected">
+                                        Transfer
+                                      </option><!-- end ngRepeat: dth in myData2 -->
+                                    </select>
+                                  </div>
+                                  <div class="col-md-4" style="padding-left: 5px;    padding-right: 5px;">
+                                    <label class="black-text">Trip Type</label>
+                                    <ul class="nav nav-tab md-tabs">
 
-                                      
+                                      <li class="nav-item">
+                                        <a class="nav-link black-text waves-effect waves-light active show"
+                                          data-toggle="tab" href="#panel3" role="tab">Round Trip</a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link black-text waves-effect waves-light" data-toggle="tab"
+                                          href="#panel4" role="tab">One Way</a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link black-text waves-effect waves-light" data-toggle="tab"
+                                          href="#panel5" role="tab">Multi City</a>
+                                      </li>
+
+                                    </ul>
+                                  </div>
+
+
+                                </div>
+                                <div class="row">
+
+                                  <div class="col-md-3" style="padding-left: 5px; padding-right: 5px;">
+                                    <label class="black-text">Form</label>
+                                    <input
+                                      class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched"
+                                      id="source_city" type="text" autocomplete="off" placeholder="Source city"
+                                      required>
+
+                                  </div>
+                                  <div class="col-md-3" style="padding-left: 5px; padding-right: 5px;">
+                                    <label class="black-text">
+                                      To</label>
+
+                                    <input
+                                      class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched"
+                                      type="text" autocomplete="off" id="destination_city"
+                                      placeholder="Destination city" required>
+                                  </div>
+
+                                  <div class="tab-content col-md-6">
+                                    <!---multi-city---->
+                                    <div class="tab-pane fade" id="panel5" role="tabpanel">
+                                      <div class="col-md-4 float-left">
+                                        <label class="black-text"> </label> <button type="submit"
+                                          class="btn btn-warning waves-effect waves-light mt-4" value="submit"
+                                          style="padding: 10px 15px 10px 15px;">Add Cities</button>
+
+                                      </div>
+                                      <div class="col-md-4 float-left">
+                                        <label class="black-text active">Travel / Start Date</label>
+
+                                        <input placeholder="Selected date" type="date" id="multiCity_trip_date_2"
+                                          class="form-control datepicker">
+                                      </div>
+                                      <div class="col-md-4 float-left">
+                                        <label class="black-text active">Travel / Start Date</label>
+
+                                        <input placeholder="Selected date" type="date" id="multiCity_trip_date_1"
+                                          class="form-control datepicker">
+                                      </div>
                                     </div>
-                          <div class="row">
+                                    <!---multi-city---->
+                                    <!---one-way---->
+                                    <div class="col-md-6 tab-pane fade float-left" id="panel4" role="tabpanel">
+                                      <label class="black-text active">Travel / Start Date</label>
 
-                                        <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
-                                            <label class="black-text">Form</label>
-      <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" id="source_city"type="text" autocomplete="off" placeholder="Source city" required>  
-                        
-                                        </div>
-                                        <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
-                                            <label class="black-text">
-    To</label>
-
-                                            <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" autocomplete="off" id="destination_city" placeholder="Destination city" required>      
-                                          </div>
-
-                                      <div class="tab-content col-md-6">
-                      <!---multi-city---->
-                                      <div class="tab-pane fade" id="panel5" role="tabpanel">
-                      <div class="col-md-4 float-left">
-                                            <label class="black-text"> </label> <button type="submit" class="btn btn-warning waves-effect waves-light mt-4" value="submit" style="padding: 10px 15px 10px 15px;">Add Cities</button>
-
-                                        </div>
-                      <div class="col-md-4 float-left">
-                                            <label class="black-text active">Travel / Start Date</label>
-
-                                            <input placeholder="Selected date" type="date" id="multiCity_trip_date_2" class="form-control datepicker"> 
-                        </div><div class="col-md-4 float-left">
-                                            <label class="black-text active">Travel / Start Date</label>
-
-                                            <input placeholder="Selected date" type="date" id="multiCity_trip_date_1" class="form-control datepicker"> 
-                        </div>
-                      </div>
-                      <!---multi-city---->
-                      <!---one-way---->
-                      <div class="col-md-6 tab-pane fade float-left" id="panel4" role="tabpanel">
-                                            <label class="black-text active">Travel / Start Date</label>
-
-                                            <input placeholder="Selected date" type="date" id="one_way_trip_date" class="form-control datepicker"> 
-                        </div>
-                        <!---one-way-------->
-                        <!---round-city---->
-                        <div class="tab-pane fade show active float-left" id="panel3" role="tabpanel">
-                        <div class="col-md-6 float-left">
-                                            <label class="black-text active">Return Date</label>
-
-                                          <input placeholder="Selected date" type="date" id="returnTrip_date" class="form-control datepicker">   
-                          </div>
-    <div class="col-md-6 float-left">
-
-                                            <label class="black-text active">Travel / Start Date</label>
-
-                                            <input placeholder="Selected date" type="date" id="round_trip_date" class="form-control datepicker"> 
-                        </div>
-                        </div>
-                        <!---round-city---->
-                        </div>
+                                      <input placeholder="Selected date" type="date" id="one_way_trip_date"
+                                        class="form-control datepicker">
                                     </div>
-                          <div class="row pt-4">
-                            <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
-                                        
+                                    <!---one-way-------->
+                                    <!---round-city---->
+                                    <div class="tab-pane fade show active float-left" id="panel3" role="tabpanel">
+                                      <div class="col-md-6 float-left">
+                                        <label class="black-text active">Return Date</label>
 
-                                        <label class="black-text active">Pickup Time</label>
-                                        </div>
+                                        <input placeholder="Selected date" type="date" id="returnTrip_date"
+                                          class="form-control datepicker">
+                                      </div>
+                                      <div class="col-md-6 float-left">
 
-                                        <div class="col-md-2" style="padding-left: 5px;    padding-right: 5px;">
-                                        
+                                        <label class="black-text active">Travel / Start Date</label>
 
-                                            <select name="pickup_hours_outstation" id="pickup_hours" class="form-control">
-                          <option value="-1">--hours--</option>
-                                
-                                  <option >01</option>
-                                
-                                  <option>02</option>
-                                
-                                  <option>03</option>
-                                
-                                  <option value="04">04</option>
-                                
-                                  <option value="05">05</option>
-                                
-                                  <option value="06">06</option>
-                                
-                                  <option value="07">07</option>
-                                
-                                  <option value="08">08</option>
-                                
-                                  <option value="09">09</option>
-                                
-                                  <option value="10">10</option>
-                                
-                                  <option value="11">11</option>
-                                
-                                  <option value="12">12</option>
-                                
-                        </select>
-                                        </div>
-                                        <div class="col-md-2" style="padding-left: 5px;    padding-right: 5px;">
-                                        
-                                        
-                                        <select name="pickup_minutes_outstation" id="pickup_minutes" class="form-control">
-                                <option value="-1">--minutes--</option>
-                                
-                                  <option>00</option>
-                                
-                                  <option>01</option>
-                                
-                                  <option>02</option>
-                                
-                                  <option>03</option>
-                                
-                                  <option value="04">04</option>
-                                
-                                  <option value="05">05</option>
-                                
-                                  <option value="06">06</option>
-                                
-                                  <option value="07">07</option>
-                                
-                                  <option value="08">08</option>
-                                
-                                  <option value="09">09</option>
-                                
-                                  <option value="10">10</option>
-                                
-                                  <option value="11">11</option>
-                                
-                                  <option value="12">12</option>
-                                
-                                  <option value="13">13</option>
-                                
-                                  <option value="14">14</option>
-                                
-                                  <option value="15">15</option>
-                                
-                                  <option value="16">16</option>
-                                
-                                  <option value="17">17</option>
-                                
-                                  <option value="18">18</option>
-                                
-                                  <option value="19">19</option>
-                                
-                                  <option value="20">20</option>
-                                
-                                  <option value="21">21</option>
-                                
-                                  <option value="22">22</option>
-                                
-                                  <option value="23">23</option>
-                                
-                                  <option value="24">24</option>
-                                
-                                  <option value="25">25</option>
-                                
-                                  <option value="26">26</option>
-                                
-                                  <option value="27">27</option>
-                                
-                                  <option value="28">28</option>
-                                
-                                  <option value="29">29</option>
-                                
-                                  <option value="30">30</option>
-                                
-                                  <option value="31">31</option>
-                                
-                                  <option value="32">32</option>
-                                
-                                  <option value="33">33</option>
-                                
-                                  <option value="34">34</option>
-                                
-                                  <option value="35">35</option>
-                                
-                                  <option value="36">36</option>
-                                
-                                  <option value="37">37</option>
-                                
-                                  <option value="38">38</option>
-                                
-                                  <option value="39">39</option>
-                                
-                                  <option value="40">40</option>
-                                
-                                  <option value="41">41</option>
-                                
-                                  <option value="42">42</option>
-                                
-                                  <option value="43">43</option>
-                                
-                                  <option value="44">44</option>
-                                
-                                  <option value="45">45</option>
-                                
-                                  <option value="46">46</option>
-                                
-                                  <option value="47">47</option>
-                                
-                                  <option value="48">48</option>
-                                
-                                  <option value="49">49</option>
-                                
-                                  <option value="50">50</option>
-                                
-                                  <option value="51">51</option>
-                                
-                                  <option value="52">52</option>
-                                
-                                  <option value="53">53</option>
-                                
-                                  <option value="54">54</option>
-                                
-                                  <option value="55">55</option>
-                                
-                                  <option value="56">56</option>
-                                
-                                  <option value="57">57</option>
-                                
-                                  <option value="58">58</option>
-                                
-                                  <option value="59">59</option>
-                                
-                              </select> 
-                        </div>
-
-                                        <div class="col-md-2" style="padding-left: 5px;    padding-right: 0px;">
-                                          
-
-                                          
-                                            <select name="pickup_meridiem_outstation" id="pickup_meridiem" class="form-control">
-                                <option value="-1">--meridiem--</option>
-                                <option value="AM">AM</option>
-                                <option value="PM">PM</option>
-                              </select>     </div>
-                                        <div class="col-md-3">
-                                          <button class="btn btn-warning waves-effect waves-light mt-4">Save and Book Hotel</button>
-
-                                        </div>
+                                        <input placeholder="Selected date" type="date" id="round_trip_date"
+                                          class="form-control datepicker">
+                                      </div>
                                     </div>
-                                </form>
+                                    <!---round-city---->
+                                  </div>
+                                </div>
+                                <div class="row pt-4">
+                                  <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
+
+
+                                    <label class="black-text active">Pickup Time</label>
+                                  </div>
+
+                                  <div class="col-md-2" style="padding-left: 5px;    padding-right: 5px;">
+
+
+                                    <select name="pickup_hours_outstation" id="pickup_hours" class="form-control">
+                                      <option value="-1">--hours--</option>
+
+                                      <option>01</option>
+
+                                      <option>02</option>
+
+                                      <option>03</option>
+
+                                      <option value="04">04</option>
+
+                                      <option value="05">05</option>
+
+                                      <option value="06">06</option>
+
+                                      <option value="07">07</option>
+
+                                      <option value="08">08</option>
+
+                                      <option value="09">09</option>
+
+                                      <option value="10">10</option>
+
+                                      <option value="11">11</option>
+
+                                      <option value="12">12</option>
+
+                                    </select>
+                                  </div>
+                                  <div class="col-md-2" style="padding-left: 5px;    padding-right: 5px;">
+
+
+                                    <select name="pickup_minutes_outstation" id="pickup_minutes" class="form-control">
+                                      <option value="-1">--minutes--</option>
+
+                                      <option>00</option>
+
+                                      <option>01</option>
+
+                                      <option>02</option>
+
+                                      <option>03</option>
+
+                                      <option value="04">04</option>
+
+                                      <option value="05">05</option>
+
+                                      <option value="06">06</option>
+
+                                      <option value="07">07</option>
+
+                                      <option value="08">08</option>
+
+                                      <option value="09">09</option>
+
+                                      <option value="10">10</option>
+
+                                      <option value="11">11</option>
+
+                                      <option value="12">12</option>
+
+                                      <option value="13">13</option>
+
+                                      <option value="14">14</option>
+
+                                      <option value="15">15</option>
+
+                                      <option value="16">16</option>
+
+                                      <option value="17">17</option>
+
+                                      <option value="18">18</option>
+
+                                      <option value="19">19</option>
+
+                                      <option value="20">20</option>
+
+                                      <option value="21">21</option>
+
+                                      <option value="22">22</option>
+
+                                      <option value="23">23</option>
+
+                                      <option value="24">24</option>
+
+                                      <option value="25">25</option>
+
+                                      <option value="26">26</option>
+
+                                      <option value="27">27</option>
+
+                                      <option value="28">28</option>
+
+                                      <option value="29">29</option>
+
+                                      <option value="30">30</option>
+
+                                      <option value="31">31</option>
+
+                                      <option value="32">32</option>
+
+                                      <option value="33">33</option>
+
+                                      <option value="34">34</option>
+
+                                      <option value="35">35</option>
+
+                                      <option value="36">36</option>
+
+                                      <option value="37">37</option>
+
+                                      <option value="38">38</option>
+
+                                      <option value="39">39</option>
+
+                                      <option value="40">40</option>
+
+                                      <option value="41">41</option>
+
+                                      <option value="42">42</option>
+
+                                      <option value="43">43</option>
+
+                                      <option value="44">44</option>
+
+                                      <option value="45">45</option>
+
+                                      <option value="46">46</option>
+
+                                      <option value="47">47</option>
+
+                                      <option value="48">48</option>
+
+                                      <option value="49">49</option>
+
+                                      <option value="50">50</option>
+
+                                      <option value="51">51</option>
+
+                                      <option value="52">52</option>
+
+                                      <option value="53">53</option>
+
+                                      <option value="54">54</option>
+
+                                      <option value="55">55</option>
+
+                                      <option value="56">56</option>
+
+                                      <option value="57">57</option>
+
+                                      <option value="58">58</option>
+
+                                      <option value="59">59</option>
+
+                                    </select>
+                                  </div>
+
+                                  <div class="col-md-2" style="padding-left: 5px;    padding-right: 0px;">
+
+
+
+                                    <select name="pickup_meridiem_outstation" id="pickup_meridiem" class="form-control">
+                                      <option value="-1">--meridiem--</option>
+                                      <option value="AM">AM</option>
+                                      <option value="PM">PM</option>
+                                    </select> </div>
+                                  <div class="col-md-3">
+                                    <a href="#popup" class="btn btn-warning waves-effect waves-light mt-4">Book now!</a>
+                                  </div>
+                                </div>
+                              </form>
 
                             </div>
                             <!--/.Panel 3-->
 
                             <!--Panel 4-->
-                            <div class="tab-pane fade" id="panel1014" role="tabpanel" style="    padding: 20px;">
-                                <form class="ng-pristine ng-valid ng-valid-maxlength" id='busForm'>
-                                    <div class="row">
+                            <!-- <div class="tab-pane fade" id="panel1014" role="tabpanel" style=" padding: 20px;">
+                              <form class="ng-pristine ng-valid ng-valid-maxlength" id='busForm'>
+                                <div class="row">
 
-                                        <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
-                                            <label class="black-text">Select a city (From)</label>
+                                  <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
+                                    <label class="black-text">Select a city (From)</label>
 
-                                        <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" name="amount" autocomplete="on" placeholder="Type City Name" id='bus_departure' required>
-                                        </div>
-                                        <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
-                                            <label class="black-text">Select a city (To)</label>
+                                    <input
+                                      class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched"
+                                      type="text" name="amount" autocomplete="on" placeholder="Type City Name"
+                                      id='bus_departure' required>
+                                  </div>
+                                  <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
+                                    <label class="black-text">Select a city (To)</label>
 
-                                    <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" name="amount" autocomplete="on"  id='bus_destination' placeholder="Type City Name" required>
-                                        </div>
-                                      
+                                    <input
+                                      class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched"
+                                      type="text" name="amount" autocomplete="on" id='bus_destination'
+                                      placeholder="Type City Name" required>
+                                  </div>
 
 
-                                        <div class="col-md-3" style="padding-left: 5px;    padding-right: 0px;">
-                                            <label class="black-text active">Departing</label>
 
-                                            <input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched" type="text" name="amount" autocomplete="on" id='departing' required>
-                                        </div>
-                                        <div class="col-md-3"><label class="black-text"><button type="submit" ng-click="sendRecharge(recharge)" class="btn btn-warning waves-effect waves-light mt-4" value="submit">Desire Book Go</button>
+                                  <div class="col-md-3" style="padding-left: 5px;    padding-right: 0px;">
+                                    <label class="black-text active">Departing</label>
 
-                                        </label></div>
-                                    </div>
-                                </form>
+                                    <input
+                                      class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched"
+                                      type="text" name="amount" autocomplete="on" id='departing' required>
+                                  </div>
+                                  <div class="col-md-3"><label class="black-text"><button type="submit"
+                                        ng-click="sendRecharge(recharge)"
+                                        class="btn btn-warning waves-effect waves-light mt-4" value="submit">Desire Book
+                                        Go</button>
 
-                            </div>
-                          
-                          
-                          
-                          
-                          
-                        
+                                    </label></div>
+                                </div>
+                              </form>
+                            </div> -->
                             <!--/.Panel 4-->
 
                         </div>
@@ -861,102 +918,113 @@
       <main>
       
 
+         
           <!--Section: Main info-->
           <section class="wow fadeIn indigo darken-4 py-5 border-top border-primary">
-          <div class="container">
-        <div id ="multi-item-example" class="slide carousel-multi-item" data-ride="carousel">
-
+            <div class="container">
+              <div id="multi-item-example" class="slide carousel-multi-item" data-ride="carousel">
+          
+                <!--Grid row-->
+          
+                <div class="carousel-inner" role="listbox">
+          
+                  <!--First slide-->
+                  <div class="carousel-item">
+          
+                    <div class="col-md-4 float-left">
+                      <div class="card mb-2">
+                        <img class="card-img-top"
+                          src="https://mauritiusattractions.com/content/images/category-page-images/holiday-package.jpg" alt="">
+          
+                      </div>
+                    </div>
+          
+                    <div class="col-md-4 float-left clearfix d-none d-md-block">
+                      <div class="card mb-2">
+                        <img class="card-img-top"
+                          src="https://mauritiusattractions.com/content/images/category-page-images/holiday-package.jpg" alt="">
+          
+                      </div>
+                    </div>
+          
+                    <div class="col-md-4 float-left clearfix d-none d-md-block">
+                      <div class="card mb-2">
+                        <img class="card-img-top"
+                          src="http://ahmedabadbusinesspages.com/wp-content/themes/directorypress/thumbs/Kesar-Tourism-Ahmedabad-Tour-Operator-for-Customized-Travel-Packages.png"
+                          alt="">
+          
+                      </div>
+                    </div>
+          
+                  </div>
+                  <!--/.First slide-->
+          
+                  <!--Second slide-->
+                  <div class="carousel-item active">
+          
+                    <div class="col-md-4 float-left">
+                      <div class="card mb-2">
+                        <img class="card-img-top"
+                          src="https://mauritiusattractions.com/content/images/category-page-images/holiday-package.jpg" alt="">
+          
+                      </div>
+                    </div>
+          
+                    <div class="col-md-4 float-left clearfix d-none d-md-block">
+                      <div class="card mb-2">
+                        <img class="card-img-top"
+                          src="https://mauritiusattractions.com/content/images/category-page-images/holiday-package.jpg" alt="">
+          
+                      </div>
+                    </div>
+          
+                    <div class="col-md-4 float-left clearfix d-none d-md-block">
+                      <div class="card mb-2">
+                        <img class="card-img-top"
+                          src="https://mauritiusattractions.com/content/images/category-page-images/holiday-package.jpg" alt="">
+          
+                      </div>
+                    </div>
+          
+                  </div>
+                  <!--/.Second slide-->
+          
+                  <!--Third slide-->
+                  <div class="carousel-item">
+          
+                    <div class="col-md-4 float-left">
+                      <div class="card mb-2">
+                        <img class="card-img-top"
+                          src="https://mauritiusattractions.com/content/images/category-page-images/holiday-package.jpg" alt="">
+          
+                      </div>
+                    </div>
+          
+                    <div class="col-md-4 float-left clearfix d-none d-md-block">
+                      <div class="card mb-2">
+                        <img class="card-img-top"
+                          src="https://mauritiusattractions.com/content/images/category-page-images/holiday-package.jpg" alt="">
+          
+                      </div>
+                    </div>
+          
+                    <div class="col-md-4 float-left clearfix d-none d-md-block">
+                      <div class="card mb-2">
+                        <img class="card-img-top"
+                          src="https://mauritiusattractions.com/content/images/category-page-images/holiday-package.jpg" alt="">
+          
+                      </div>
+                    </div>
+          
+                  </div>
+                  <!--/.Third slide-->
+          
+                </div>
+          
+              </div>
+            </div>
             <!--Grid row-->
           
-    <div class="carousel-inner" role="listbox">
-
-            <!--First slide-->
-            <div class="carousel-item">
-
-              <div class="col-md-4 float-left">
-                <div class="card mb-2">
-                  <img class="card-img-top" src="img/Visa-Services-Thailand.jpg" alt="">
-            
-                </div>
-              </div>
-
-              <div class="col-md-4 float-left clearfix d-none d-md-block">
-                <div class="card mb-2">
-                  <img class="card-img-top" src="img/Kashmir-Holiday-Package.jpg" alt="">
-                
-                </div>
-              </div>
-
-              <div class="col-md-4 float-left clearfix d-none d-md-block">
-                <div class="card mb-2">
-                  <img class="card-img-top" src="img/Visa-Services-Dubai.jpg" alt="">
-              
-                </div>
-              </div>
-
-            </div>
-            <!--/.First slide-->
-
-            <!--Second slide-->
-            <div class="carousel-item active">
-
-              <div class="col-md-4 float-left">
-                <div class="card mb-2">
-                  <img class="card-img-top" src="img/Terrific-Tuesday-Offer-Water-Kingdom.jpg" alt="">
-              
-                </div>
-              </div>
-
-              <div class="col-md-4 float-left clearfix d-none d-md-block">
-                <div class="card mb-2">
-                  <img class="card-img-top" src="img/Terrific-Tuesday-Offer-EsselWorld.jpg" alt="">
-              
-                </div>
-              </div>
-
-              <div class="col-md-4 float-left clearfix d-none d-md-block">
-                <div class="card mb-2">
-                  <img class="card-img-top" src="img/More-Offers-and-Discounts.jpg" alt="">
-              
-                </div>
-              </div>
-
-            </div>
-            <!--/.Second slide-->
-
-            <!--Third slide-->
-            <div class="carousel-item">
-
-              <div class="col-md-4 float-left">
-                <div class="card mb-2">
-                  <img class="card-img-top" src="img/North-East-Holiday-Package.jpg" alt="">
-              
-                </div>
-              </div>
-
-              <div class="col-md-4 float-left clearfix d-none d-md-block">
-                <div class="card mb-2">
-                  <img class="card-img-top" src="img/Freakout-Friday-Offer-EsselWorld.jpg" alt="">
-                
-                </div>
-              </div>
-
-              <div class="col-md-4 float-left clearfix d-none d-md-block">
-                <div class="card mb-2">
-                  <img class="card-img-top" src="img/Andaman-Holiday-Package.jpg" alt="">
-              
-                </div>
-              </div>
-
-            </div>
-            <!--/.Third slide-->
-
-          </div>
-            
-        </div>
-        </div>
-            <!--Grid row-->
-
           </section>
           <div class="container">
           <!--Section: Main info-->
@@ -969,196 +1037,214 @@
 
             <!--Grid row-->
             <div class="row wow fadeIn">
-
               <!--Grid column-->
               <div class="col-lg-6 col-md-12">
-          <div class="row">
-          <div class="col-md-9">
-            <h3 class="orange-text">Indian Holiday Packages</h3>
-          </div>
-            <div class="col-md-3">
-          <button type="button" class="btn btn-md btn-warning  mb-3">Warning</button>
-          </div>
-          </div>
-        
-      
-
-                <!--First row-->
-              <div class="card">
-          <div class="card-body waves-effect waves-light">
                 <div class="row">
-      
-                <div class="col-md-3">
-                  <img src="img/ImageReaderArticle1 (1).jpg" width="100%">
+                  <div class="col-md-9">
+                    <h3 class="orange-text">Nigerian Holiday Packages</h3>
                   </div>
-                  <div class="col-md-6">
-                    <p class="feature-title"><strong>Magic of Meghalaya and Assam</strong></p>
-            <p>4 Nights / 5 Days</p>
-                  <a class="btn-floating btn-sm border border-warning waves-effect waves-light">
-            <i class="home fa fa-bed">
-            </i></a>
-          <a class="btn-floating btn-sm border border-warning waves-effect waves-light"> <i class="home fa fa-binoculars"></i>
-            <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i class="home fa fa-car"></i>
-            </a> <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i class="home fa fa-cutlery"></i></a>
-            </a> 
-                  </div>
-              <div class="col-md-3">
-                    <h5 class="feature-title">From</h5>
-                    <p class="grey-text">14,500 </p>
-              <button type="button" class="btn btn-md btn-warning  mb-3">Detail</button>
+                  <div class="col-md-3">
+                    <button type="button" class="btn btn-md btn-warning  mb-3">View All</button>
                   </div>
                 </div>
-            </div>
-                </div>
-                <!--/First row-->
-
-                <!--/Second row-->
-
-                <div style="height:30px"></div>
-
-                <!--Third row-->
-            <div class="card">
-          <div class="card-body">
-                  <div class="row">
-      
-                <div class="col-md-3">
-                  <img src="img/ImageReaderArticle1 (1).jpg" width="100%">
-                  </div>
-                  <div class="col-md-6">
-                    <p class="feature-title"><strong>Go Goa with DoubleTree</strong></p>
-            <p>3 Nights / 4 Days</p>
-                  <a class="btn-floating btn-sm border border-warning waves-effect waves-light">
-            <i class="home fa fa-bed">
-            </i></a>
-          <a class="btn-floating btn-sm border border-warning waves-effect waves-light"> <i class="home fa fa-binoculars"></i>
-            <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i class="home fa fa-car"></i>
-            </a> <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i class="home fa fa-cutlery"></i></a>
-            </a> 
-                  </div>
-              <div class="col-md-3">
-                    <h5 class="feature-title">From</h5>
-                    <p class="grey-text">14,500 </p>
-              <button type="button" class="btn btn-md btn-warning  mb-3">Detail</button>
-                  </div>
-                </div>
-            </div>
-                </div>
-                <!--/Third row-->
-
-              </div>
-              <!--/Grid column-->
-
-              <!--Grid column-->
-      
-              <!--Grid column-->
-              <div class="col-lg-6 col-md-12">
-      <div class="row">
-          <div class="col-md-9">
-            <h3 class="orange-text">International Holiday Packages</h3>
-          </div>
-            <div class="col-md-2">
-          <button type="button" class="btn btn-md btn-warning mb-3">Warning</button>
-          </div>
-          </div>
-                <!--First row-->
-              <div class="card">
-          <div class="card-body">
-                  <div class="row">
-      
-                <div class="col-md-3">
-                  <img src="img/ImageReaderArticle1 (1).jpg" width="100%">
-                  </div>
-                  <div class="col-md-6">
-                    <p class="feature-title"><strong>Honeymoon in Mauritius</strong></p>
-            <p>4 Nights / 5 Days</p>
-                  <a class="btn-floating btn-sm border border-warning waves-effect waves-light">
-            <i class="home fa fa-bed">
-            </i></a>
-          <a class="btn-floating btn-sm border border-warning waves-effect waves-light"> <i class="home fa fa-binoculars"></i>
-            <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i class="home fa fa-car"></i>
-            </a> <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i class="home fa fa-cutlery"></i></a>
-            </a> 
-                  </div>
-              <div class="col-md-3">
-                    <h5 class="feature-title">From</h5>
-                    <p class="grey-text">14,500 </p>
-              <button type="button" class="btn btn-md btn-warning  mb-3">Detail</button>
-                  </div>
-                </div>
-            </div>
-                </div>
-                <!--/First row-->
-
-                <div style="height:30px"></div>
-
-                <!--Second row-->
-          <div class="card">
-          <div class="card-body">
-                <div class="row">
-          
-      
-                <div class="col-md-3">
-                  <img src="img/ImageReaderArticle1 (1).jpg" width="100%">
-                  </div>
-                  <div class="col-md-6">
-                    <p class="feature-title"><strong>Romance in Bali</strong></p>
-            <p>3 Nights / 4 Days</p>
-                  <a class="btn-floating btn-sm border border-warning waves-effect waves-light">
-            <i class="home fa fa-bed">
-            </i></a>
-          <a class="btn-floating btn-sm border border-warning waves-effect waves-light"> <i class="home fa fa-binoculars"></i>
-            <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i class="home fa fa-car"></i>
-            </a> <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i class="home fa fa-cutlery"></i></a>
-            </a> 
-                  </div>
-              <div class="col-md-3">
-                    <h5 class="feature-title">From</h5>
-                    <p class="grey-text">14,500 </p>
-              <button type="button" class="btn btn-md btn-warning  mb-3">Detail</button>
-                  </div>
             
-            </div>
+                <!--First row-->
+                <div class="card">
+                  <div class="card-body waves-effect waves-light">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img src="img/ImageReaderArticle1 (1).jpg" width="100%">
+                      </div>
+                      <div class="col-md-6">
+                        <p class="feature-title"><strong>Osun ree parada</strong></p>
+                        <p>4 Nights / 5 Days</p>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                            class="home fa fa-bed"></i></a>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"> <i
+                            class="home fa fa-binoculars"></i>
+                          <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                              class="home fa fa-car"></i></a>
+                          <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                              class="home fa fa-cutlery"></i></a>
+                        </a>
+                      </div>
+                      <div class="col-md-3">
+                        <h5 class="feature-title">From</h5>
+                        <p class="grey-text">#224,500 </p>
+                        <button type="button" class="btn btn-md btn-warning  mb-3">details</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-                <!--/Second row-->
-
+                <!--/First row-->
+            
                 <div style="height:30px"></div>
-
-                <!--Third row-->
-            <div class="card">
-          <div class="card-body">
-              <div class="row">
-      
-                <div class="col-md-3">
-                  <img src="img/ImageReaderArticle1 (1).jpg" width="100%">
-                  </div>
-                  <div class="col-md-6">
-                    <p class="feature-title"><strong>Exotic Bali</strong></p>
-            <p>3 Nights / 4 Days</p>
-                  <a class="btn-floating btn-sm border border-warning waves-effect waves-light">
-            <i class="home fa fa-bed">
-            </i></a>
-          <a class="btn-floating btn-sm border border-warning waves-effect waves-light"> <i class="home fa fa-binoculars"></i>
-            <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i class="home fa fa-car"></i>
-            </a> <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i class="home fa fa-cutlery"></i></a>
-            </a> 
-                  </div>
-              <div class="col-md-3">
-                    <h5 class="feature-title">From</h5>
-                    <p class="grey-text">14,500 </p>
-              <button type="button" class="btn btn-md btn-warning  mb-3">Detail</button>
+            
+                <div class="card">
+                  <div class="card-body waves-effect waves-light">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img src="img/ImageReaderArticle1 (1).jpg" width="100%">
+                      </div>
+                      <div class="col-md-6">
+                        <p class="feature-title"><strong>Rock Olumo</strong></p>
+                        <p>4 Nights / 5 Days</p>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                            class="home fa fa-bed"></i></a>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"> <i
+                            class="home fa fa-binoculars"></i>
+                          <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                              class="home fa fa-car"></i></a>
+                          <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                              class="home fa fa-cutlery"></i></a>
+                        </a>
+                      </div>
+                      <div class="col-md-3">
+                        <h5 class="feature-title">From</h5>
+                        <p class="grey-text">#257,500 </p>
+                        <button type="button" class="btn btn-md btn-warning  mb-3">details</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-            </div>
+            
+                <div style="height:30px"></div>
+            
+                <div class="card">
+                  <div class="card-body waves-effect waves-light">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img src="img/ImageReaderArticle1 (1).jpg" width="100%">
+                      </div>
+                      <div class="col-md-6">
+                        <p class="feature-title"><strong>Assalam Kaduna</strong></p>
+                        <p>4 Nights / 5 Days</p>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                            class="home fa fa-bed"></i></a>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"> <i
+                            class="home fa fa-binoculars"></i>
+                          <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                              class="home fa fa-car"></i></a>
+                          <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                              class="home fa fa-cutlery"></i></a>
+                        </a>
+                      </div>
+                      <div class="col-md-3">
+                        <h5 class="feature-title">From</h5>
+                        <p class="grey-text">#350,000 </p>
+                        <button type="button" class="btn btn-md btn-warning  mb-3">details</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <!--/Third row-->
-
+            
               </div>
               <!--/Grid column-->
-
-              <!--/Grid column-->
-
+              <div class="col-lg-6 col-md-12 mT-50">
+                <div class="row">
+                  <div class="col-md-9">
+                    <h3 class="orange-text">International Holiday Packages</h3>
+                  </div>
+                  <div class="col-md-3">
+                    <button type="button" class="btn btn-md btn-warning  mb-3 waves-effect waves-light">View All</button>
+                  </div>
+                </div>
+            
+            
+            
+                <!--First row-->
+                <div class="card">
+                  <div class="card-body waves-effect waves-light">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img src="img/ImageReaderArticle1 (1).jpg" width="100%">
+                      </div>
+                      <div class="col-md-6">
+                        <p class="feature-title"><strong>Magic of Romeo and Juliet</strong></p>
+                        <p>4 Nights / 5 Days</p>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                            class="home fa fa-bed"></i></a>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"> <i
+                            class="home fa fa-binoculars"></i>
+                        </a><a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                            class="home fa fa-car"></i></a>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                            class="home fa fa-cutlery"></i></a>
+            
+                      </div>
+                      <div class="col-md-3">
+                        <h5 class="feature-title">From</h5>
+                        <p class="grey-text">$7,500 </p>
+                        <button type="button" class="btn btn-md btn-warning  mb-3 waves-effect waves-light">details</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--/First row-->
+            
+                <div style="height:30px"></div>
+            
+                <div class="card">
+                  <div class="card-body waves-effect waves-light">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img src="img/ImageReaderArticle1 (1).jpg" width="100%">
+                      </div>
+                      <div class="col-md-6">
+                        <p class="feature-title"><strong>Dellattoire</strong></p>
+                        <p>4 Nights / 5 Days</p>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                            class="home fa fa-bed"></i></a>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"> <i
+                            class="home fa fa-binoculars"></i>
+                        </a><a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                            class="home fa fa-car"></i></a>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                            class="home fa fa-cutlery"></i></a>
+            
+                      </div>
+                      <div class="col-md-3">
+                        <h5 class="feature-title">From</h5>
+                        <p class="grey-text">$14,500 </p>
+                        <button type="button" class="btn btn-md btn-warning  mb-3 waves-effect waves-light">details</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div style="height:30px"></div>
+            
+                <div class="card">
+                  <div class="card-body waves-effect waves-light">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img src="img/ImageReaderArticle1 (1).jpg" width="100%">
+                      </div>
+                      <div class="col-md-6">
+                        <p class="feature-title"><strong>Where Two Hearts Meet</strong></p>
+                        <p>6 Nights / 7 Days</p>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                            class="home fa fa-bed"></i></a>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"> <i
+                            class="home fa fa-binoculars"></i></a>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                            class="home fa fa-car"></i></a>
+                        <a class="btn-floating btn-sm border border-warning waves-effect waves-light"><i
+                            class="home fa fa-cutlery"></i></a>
+                      </div>
+                      <div class="col-md-3">
+                        <h5 class="feature-title">From</h5>
+                        <p class="grey-text">$8,500 </p>
+                        <button type="button" class="btn btn-md btn-warning  mb-3 waves-effect waves-light">details</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            </section>
+            
+            <!--/Grid row-->
             <!--/Grid row-->
           <div class="my-5"></div>
           </section>
@@ -1386,8 +1472,7 @@
               <a id="footer-link-license" href="#">24/7 Dedicated Customer Support</a>
             </p>
             <p>
-              <a id="footer-link-changelog" href="#">Copyright © 2008-2018 Flybeta (Nigeria) Ltd. 
-    All Rights Reserved.</a>
+              <a id="footer-link-changelog" href="#">Copyright ©<span id='year'></span> Flybeta (Nigeria) Ltd. All Rights Reserved.</a>
             </p>
         
           </div>
@@ -1494,7 +1579,7 @@
       <!--/.Footer Links-->
       <!-- Copyright-->
       <div class="footer-copyright py-3 text-center">
-        © 2018 Copyright:
+        © <span id='year2'></span> Copyright:
         <a href="#">
           <strong>Flybeta</strong>
         </a>
@@ -1502,15 +1587,37 @@
       <!--/.Copyright -->
     </footer>
       <!--/.Footer-->
-
+          <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+            document.getElementById("year2").innerHTML = new Date().getFullYear();
+          </script>
+          <div class="popup" id="popup">
+            <div class="popup__content">
+              <!-- <div class="popup__left">
+                          <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+                          <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+                      </div> -->
+              <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                <p class="popup__text">
+                  nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget
+                  gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet.
+                  Grar sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa
+                  vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed
+                  euismod nisi porta.
+                </p>
+                <a href="https://paystack.com/pay/flybetabook" class="btn btn--white">Book now</a>
+              </div>
+            </div>
+          </div>
         <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/js/mdb.min.js"></script>
-      
-
     <script src="./js/main.js"></script>
   </body>
 
