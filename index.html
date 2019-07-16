@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,6 +33,9 @@
           .carousel {
             height: 100vh;
           }
+          .popup {
+            top: 0;
+          }
         }
 
         @media (min-width: 800px) and (max-width: 850px) {
@@ -43,12 +45,18 @@
           .carousel {
             height: 100vh;
           }
+          .popup {
+            top: 0;
+          }
         }
 
         @media (min-width: 800px) and (max-width: 850px) {
                 .navbar:not(.top-nav-collapse) {
                     background: #1C2331!important;
                 }
+                .popup {
+            top: 0;
+          }
             }
       </style>
   </head>
@@ -848,15 +856,65 @@
                                       <option value="PM">PM</option>
                                     </select> </div>
                                   <div class="col-md-3">
-                                    <button class="btn btn-warning waves-effect waves-light mt-4">Book now!</button>  
-                                    <!-- <button onclick="bookAll()">Book now!</button> -->
-                                    <!-- <h1> Book now!</h1> -->
-                                   
+                                    <a data-toggle="modal" data-target="#summaryModal" class="btn btn-warning waves-effect waves-light mt-4">Book now!</a>
                                   </div>
                                 </div>
                               </form>
-                              <a  href="#popup" class="black-text active" id="print-ticket">Show Ticket</a>
                             </div>
+
+                  <!-- These are the codes for the pop-up modal by Sabur Ahmed -->
+                              <div id="summaryModal" class="modal fade" tabindex="-1" role="dialog">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header bg-light d-flex px-3 justify-content-between">
+                                          <h4 class="modal-title text-dark">John Doe</h4>
+                                          <a href="#"><img src="img/logo.png" width="130px" alt="Flybeta logo"></a>                                        
+                                        
+                                      </div>
+                                      <div class="modal-body">
+                                        <p class="text-dark">This is the summary of all your bookings.</p>                      
+                                        <div class="px-5 card-group">
+                                        <div class="card border-warning mb-3 lg-12 rounded" style="max-width: 20rem;">
+                                            <div class="card-header bg-warning text-white"><i class="fa fa-plane fa-1x px-2 py-1" aria-hidden="true"></i>FLIGHT</div>
+                                            <div class="card-body text-primary">
+                                              <p class="card-text text-dark text-left">nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget
+                                                  gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet.
+                                                  Grar sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa
+                                                  vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed
+                                                  euismod nisi porta.</p>
+                                            </div>
+                                          </div>
+                                          <div class="card border-warning mb-3 lg-12 rounded" style="max-width: 20rem;">
+                                            <div class="card-header bg-warning text-white"><i class="fa fa-home fa-1x px-2 py-1" aria-hidden="true"></i>HOTEL</div>
+                                            <div class="card-body text-secondary">
+                                              <p class="card-text text-dark text-left">nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget
+                                                  gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet.
+                                                  Grar sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa
+                                                  vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed
+                                                  euismod nisi porta.</p>
+                                            </div>
+                                          </div>
+                                          <div class="card border-warning mb-3 lg-12 rounded" style="max-width: 20rem;">
+                                            <div class="card-header bg-warning text-white"><i class="fa fa-car fa-1x px-2 py-1" aria-hidden="true"></i>CAR</div>
+                                            <div class="card-body text-success">
+                                              <p class="card-text text-dark text-left">nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget
+                                                  gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet.
+                                                  Grar sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa
+                                                  vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed
+                                                  euismod nisi porta.</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <a href="https://paystack.com/pay/flybetabook" type="button" class="btn btn-warning">Book Now</a>
+                                        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- pop-up Modal codes ends here -->
+
                             <!--/.Panel 3-->
 
                             <!--Panel 4-->
@@ -1594,61 +1652,7 @@
             document.getElementById("year").innerHTML = new Date().getFullYear();
             document.getElementById("year2").innerHTML = new Date().getFullYear();
           </script>
-          <div class="popup" id="popup">
-            <div class="popup__content">
-              <!-- <div class="popup__left">
-                          <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
-                          <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
-                      </div> -->
-              <div class="popup__right">
-                <a href="#section-tours" class="popup__close">&times;</a>
-                <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
-                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
-          <div id='testing'>  
-              <div id = 'filght_info'> 
-                <ul>
-                    <li class="popup__text" >Origin : <span id='ticket_origin'></span></li>
-                    <li class="popup__text" >Destination :<span id='ticket_destination'></span></li>
-                    <li class="popup__text" >Adult : <span id='ticket_adult'></span></li>
-                    <li class="popup__text" >Departing Date : <span id='ticket_departing'></span></li>
-                    <li class="popup__text" >Returning Date : <span id='ticket_returning'></span></li>
-                    <li class="popup__text" >Children : <span id='ticket_children'></span></li>
-                    <li class="popup__text" >Class Type : <span id='ticket_classType'></span></li>
-                </ul>
-            </div>
-            <div id="hotel_info">
-              <ul>
-                <li class="popup__text" >City : <span id='ticket_city'></span></li>
-                <li class="popup__text" >Hotel Preference :<span id='ticket_hotelPreference'></span></li>
-                <li class="popup__text" >Check-In Date : <span id='ticket_checkIn'></span></li>
-                <li class="popup__text" >Check-out Date : <span id='ticket_checkOut'></span></li>
-                <li class="popup__text" >Nationality : <span id='ticket_nationality'></span></li>
-                <li class="popup__text" >Room : <span id='ticket_room'></span></li>
-               
-            </ul>
-            </div>
 
-            <div id="car_info">
-              <ul>
-                <li class="popup__text" >Travel Type : <span id='ticket_travelType'></span></li>
-                <li class="popup__text" >Source City :<span id='ticket_sourceCity'></span></li>
-                <li class="popup__text" >Destination City : <span id='ticket_destinationCity'></span></li>
-                <li class="popup__text" >Multi-City-Trip Date2 : <span id='ticket_multiCity_trip_date_2'></span></li>
-                <li class="popup__text" >Multi-City-Trip Date1 : <span id='ticket_multiCity_trip_date_1'></span></li>
-                <li class="popup__text" >One way Trip : <span id='ticket_one_way_trip_date'></span></li>
-                <li class="popup__text" >Return-Date : <span id='ticket_returnTrip_date'></span></li>
-                <li class="popup__text" >Round-Trip Date  : <span id='ticket_round_trip_date'></span></li>
-                <li class="popup__text" >Pick-Up Time  : <span id='ticket_pickup_hours'></span> 
-                                                         <span id='ticket_pickup_minutes'></span>
-                                                         <span id='ticket_pickup_meridiem'></span></li>
-               
-            </ul>
-            </div>
-        </div>     
-                <a href="https://paystack.com/pay/flybetabook" class="btn btn--white">Book now</a>
-              </div>
-            </div>
-          </div>
         <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -1659,5 +1663,3 @@
   </body>
 
 </html>
-
-

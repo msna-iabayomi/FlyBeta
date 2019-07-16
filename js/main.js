@@ -1,5 +1,3 @@
-
-
 const selector = (value) => {
   return document.querySelector(value);
 }
@@ -23,13 +21,6 @@ const ticket_children = selector('#ticket_children')
 const ticket_classType = selector('#ticket_classType')
 
 
-// origin.value = sessionStorage.setItem()
-
-
-// sessionStorage.setItem('origin_input', origin1)
-// let origin_input = sessionStorage.getItem('origin_input')
-console.log('hello')
-console.log(origin)
 flightForm.addEventListener("submit",(e)=>{
   e.preventDefault();
   const origin1 = origin.value;
@@ -39,7 +30,6 @@ flightForm.addEventListener("submit",(e)=>{
   const adult1 = adult.options[adult.selectedIndex].value;
   const children1 = children.options[children.selectedIndex].value;
   const classType1 = classType.options[classType.selectedIndex].value;
-  // sessionStorage.origin_input = origin1
   sessionStorage.setItem('origin_input', origin1)
   sessionStorage.setItem('destination1_input', destination1)
   sessionStorage.setItem('departingDate1_input', departingDate1)
@@ -65,36 +55,6 @@ flightForm.addEventListener("submit",(e)=>{
   console.log(origin_input)
 })
 
-// let firstname = "awesome"
-
-// sessionStorage.setItem( "newName", firstname)
-
-// let anotherName = sessionStorage.getItem('newName')
-
-
-
-//SUBMIT FORM
-// flightForm.addEventListener('submit', (e)=>{
-//   e.preventDefault();
-//   //store data in sessionStorage as an object in an array
-
-//   sessionStorage.setItem('flightData', JSON.stringify([{
-//    adult:adult.options[adult.selectedIndex].value,
-//     children:children.options[children.selectedIndex].value,
-//     classtype:classType.options[classType.selectedIndex].value, 
-//     origin:origin.value,
-//     destination:destination.value,
-//     departingDate:departingDate.value,
-//     returningDate:returningDate.value
-//   }]))
-  
-//  console.log(JSON.parse(sessionStorage.getItem('flightData')))
-// })
-// let data_form = JSON.parse(sessionStorage.getItem('flightData'))
-// console.log(data_form[0].origin) 
-// console.log(data_form[0].destination) 
-// console.log(data_form[0].departingDate) 
-// console.log(data_form[0].returningDate) 
 
 
 // // FORM FOR HOTEL
@@ -124,7 +84,7 @@ function checkboxChecked(boxArray) {
   let checked = [];
   for (var i = 0; i < ArgLength; i++) {
       if (boxArray[i].checked) {
-          // console.log(boxArray[i].value)
+          
           checked.push(boxArray[i].value)
       }
   }
@@ -158,19 +118,7 @@ ticket_nationality.textContent = nationality1_input;
 
 
 })    
-//       // storage of data in sessionStorage
-//       sessionStorage.setItem('hotelForm', JSON.stringify ([{
-        
-//             checkradio:checkboxChecked(checkBox),
-//          hotel_destination:hotel_destination.value,
-//          hotel_preference:  hotel_preference.options[hotel_preference.selectedIndex].value,
-//          check_in_date:check_in_date.value,
-//          check_out_date: check_out_date.value,
-//          nationality: nationality.options[nationality.selectedIndex].value
-//       }]))
 
-//   console.log(JSON.parse(sessionStorage.getItem('hotelForm')))
-// })
 
 // FORM FOR RIDE
 const carForm = selector("#carForm");
@@ -254,17 +202,6 @@ ticket_round_trip_date.textContent = round_trip_date1_input;
 ticket_pickup_hours.textContent = pickup_hours1_input;
 ticket_pickup_minutes.textContent = pickup_minutes1_input;
 ticket_pickup_meridiem.textContent = pickup_meridiem1_input;
-console.log(source_city1_input)
-console.log(travel_type1_input)
-console.log(destination_city1_input)
-console.log(multiCity_trip_date_one_input)
-console.log(multiCity_trip_date_two_input)
-console.log(one_way_trip_date1_input)
-console.log(returnTrip_date1_input)
-console.log(round_trip_date1_input)
-console.log(pickup_hours1_input)
-console.log(pickup_minutes1_input)
-console.log(pickup_meridiem1_input)
 
 
 
@@ -273,56 +210,4 @@ console.log(pickup_meridiem1_input)
 })
 
 
-
-
-// carForm.addEventListener('submit', (e)=>{
-//     e.preventDefault();
-//     sessionStorage.setItem('carForm', JSON.stringify ([{
-//           travel_type: travel_type.options[travel_type.selectedIndex].value,
-//           source_city: source_city.value,
-//           destination_city: destination_city.value,
-//           pickup_hours: pickup_hours.value,
-//           pick_minutes  : pickup_minutes.value,
-//           pickup_meridiem:pickup_meridiem.value,
-//           multiCity_trip_date_1:multiCity_trip_date_1.value,
-//           multiCity_trip_date_2: multiCity_trip_date_2.value,
-//           one_way_trip_date: one_way_trip_date.value,
-//           round_trip_date: round_trip_date.value,
-//           returnTrip_date: returnTrip_date.value
-          
-
-//     }]))
-
-
-// console.log(JSON.parse(sessionStorage.getItem('carForm')))
-//   })
-// console.log(sessionStorage.getItem())
-  //  FORM OF BUS
-//   const busForm = selector('#busForm');
-
-
-//   const bus_departure = selector('#bus_departure');
-//   const bus_destination = selector('#bus_destination');
-//   const departing = selector('#departing');
-
-//   busForm.addEventListener('submit', (e)=>{
-//     e.preventDefault();
-//     sessionStorage.setItem('busForm', JSON.stringify ([{
-//      bus_departure: bus_departure.value,
-//      bus_destination: bus_destination.value,
-//      departing: departing.value
-// }]))
-
-
-// console.log(JSON.parse(sessionStorage.getItem('busForm')))
-//   })
-
-// selector('#ticket_text').innerHTML = data_form[0].origin;
-  
-// let message = ticket_text.innerHTML;
-
-
-
-
-  // const pop_text = selector('.popup__text')
-  // pop_text.innerHTML = source_city.value;
+ 
