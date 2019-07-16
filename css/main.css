@@ -149,42 +149,13 @@ section.banner1 {
   margin-left: 0.5rem;
 }
 
-#panel1011{
-     margin-left: 7rem;
-}
-#originFrom,
-#destinationTo,
-#departing-date-picker,
-#returning-date-picker{
-  width: 13rem;
-  /* margin: 1rem; */
-}
-#departing-date-picker{
-   margin-left: 5rem;
-}
-#returning-date-picker{
-  margin-left: 6rem;
-}
-#one_wayANDround_trip{
-  margin-left: 19rem;
-  margin-bottom: 1rem;
-}
-#adultNumber,
-#childrenNumber,
-#classType
-#flight_saveAndBook{
-  width: 13rem ;
-}
-#childrenNumber{
-margin-left: 0.5rem;
-}
-#classType{
+#classType {
   width: 13rem;
   margin-left: 5.8rem;
   height: 45px;
 }
 
-#flight_saveAndBook{
+#flight_saveAndBook {
   height: 45px;
   padding: 8px;
   margin-left: -6rem;
@@ -195,11 +166,7 @@ margin-left: 0.5rem;
   margin-top: 2rem;
 }
 
-
-.belowDiv{
-  margin-top: 2rem;
-}
-.classtype_text{
+.classtype_text {
   margin-left: 7rem;
   margin-left: 7rem;
 }
@@ -256,12 +223,13 @@ margin-left: 0.5rem;
 }
 
 /* abayomi styles end */
+/*Font style for the Summary Modal - Sabur Ahmed.*/
 .card-text {
   font-family: 'Courier New', Courier, monospace;
   line-height: 15px;
 }
 
-/* abayomi styles end */
+/*End of font style for the Summary Modal - Sabur Ahmed*/
 @media only screen and (max-width: 768px) {
   section.banner {
     height: auto;
