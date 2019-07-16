@@ -856,12 +856,13 @@
                                       <option value="PM">PM</option>
                                     </select> </div>
                                   <div class="col-md-3">
-                                    <a data-toggle="modal" data-target="#summaryModal" class="btn btn-warning waves-effect waves-light mt-4">Book now!</a>
+                                    <button id="print-ticket" class="btn btn-warning">Show Ticket</button>       
                                   </div>
                                 </div>
                               </form>
+                              <a data-toggle="modal" data-target="#summaryModal" id='summary' class="btn btn-warning waves-effect waves-light mt-4">Book now!</a>
                             </div>
-
+                          
                   <!-- These are the codes for the pop-up modal by Sabur Ahmed -->
                               <div id="summaryModal" class="modal fade" tabindex="-1" role="dialog">
                                   <div class="modal-dialog" role="document">
@@ -877,31 +878,58 @@
                                         <div class="card border-warning mb-3 lg-12 rounded" style="max-width: 20rem;">
                                             <div class="card-header bg-warning text-white"><i class="fa fa-plane fa-1x px-2 py-1" aria-hidden="true"></i>FLIGHT</div>
                                             <div class="card-body text-primary">
-                                              <p class="card-text text-dark text-left">nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget
-                                                  gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet.
-                                                  Grar sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa
-                                                  vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed
-                                                  euismod nisi porta.</p>
+                                            
+                                                  <div id = 'filght_info'> 
+                                                    <ul>
+                                                        <li class="popup__text" >Origin : <span id='ticket_origin'></span></li>
+                                                        <li class="popup__text" >Destination :<span id='ticket_destination'></span></li>
+                                                        <li class="popup__text" >Adult : <span id='ticket_adult'></span></li>
+                                                        <li class="popup__text" >Departing Date : <span id='ticket_departing'></span></li>
+                                                        <li class="popup__text" >Returning Date : <span id='ticket_returning'></span></li>
+                                                        <li class="popup__text" >Children : <span id='ticket_children'></span></li>
+                                                        <li class="popup__text" >Class Type : <span id='ticket_classType'></span></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                           </div>
                                           <div class="card border-warning mb-3 lg-12 rounded" style="max-width: 20rem;">
                                             <div class="card-header bg-warning text-white"><i class="fa fa-home fa-1x px-2 py-1" aria-hidden="true"></i>HOTEL</div>
                                             <div class="card-body text-secondary">
-                                              <p class="card-text text-dark text-left">nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget
-                                                  gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet.
-                                                  Grar sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa
-                                                  vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed
-                                                  euismod nisi porta.</p>
+                                            
+
+                                                  <div id="hotel_info">
+                                                    <ul>
+                                                      <li class="popup__text" >City : <span id='ticket_city'></span></li>
+                                                      <li class="popup__text" >Hotel Preference :<span id='ticket_hotelPreference'></span></li>
+                                                      <li class="popup__text" >Check-In Date : <span id='ticket_checkIn'></span></li>
+                                                      <li class="popup__text" >Check-out Date : <span id='ticket_checkOut'></span></li>
+                                                      <li class="popup__text" >Nationality : <span id='ticket_nationality'></span></li>
+                                                      <li class="popup__text" >Room : <span id='ticket_room'></span></li>
+                                                     
+                                                  </ul>
+                                                  </div>
                                             </div>
                                           </div>
                                           <div class="card border-warning mb-3 lg-12 rounded" style="max-width: 20rem;">
                                             <div class="card-header bg-warning text-white"><i class="fa fa-car fa-1x px-2 py-1" aria-hidden="true"></i>CAR</div>
                                             <div class="card-body text-success">
-                                              <p class="card-text text-dark text-left">nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget
-                                                  gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet.
-                                                  Grar sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa
-                                                  vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed
-                                                  euismod nisi porta.</p>
+                                            
+
+                                            <div id="car_info">
+                                              <ul>
+                                                <li class="popup__text" >Travel Type : <span id='ticket_travelType'></span></li>
+                                                <li class="popup__text" >Source City :<span id='ticket_sourceCity'></span></li>
+                                                <li class="popup__text" >Destination City : <span id='ticket_destinationCity'></span></li>
+                                                <li class="popup__text" >Multi-City-Trip Date2 : <span id='ticket_multiCity_trip_date_2'></span></li>
+                                                <li class="popup__text" >Multi-City-Trip Date1 : <span id='ticket_multiCity_trip_date_1'></span></li>
+                                                <li class="popup__text" >One way Trip : <span id='ticket_one_way_trip_date'></span></li>
+                                                <li class="popup__text" >Return-Date : <span id='ticket_returnTrip_date'></span></li>
+                                                <li class="popup__text" >Round-Trip Date  : <span id='ticket_round_trip_date'></span></li>
+                                                <li class="popup__text" >Pick-Up Time  : <span id='ticket_pickup_hours'></span> 
+                                                                                         <span id='ticket_pickup_minutes'></span>
+                                                                                         <span id='ticket_pickup_meridiem'></span></li>
+                                               
+                                            </ul>
                                             </div>
                                           </div>
                                         </div>
@@ -915,49 +943,7 @@
                                 </div>
                                 <!-- pop-up Modal codes ends here -->
 
-                            <!--/.Panel 3-->
-
-                            <!--Panel 4-->
-                            <!-- <div class="tab-pane fade" id="panel1014" role="tabpanel" style=" padding: 20px;">
-                              <form class="ng-pristine ng-valid ng-valid-maxlength" id='busForm'>
-                                <div class="row">
-
-                                  <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
-                                    <label class="black-text">Select a city (From)</label>
-
-                                    <input
-                                      class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched"
-                                      type="text" name="amount" autocomplete="on" placeholder="Type City Name"
-                                      id='bus_departure' required>
-                                  </div>
-                                  <div class="col-md-3" style="padding-left: 5px;    padding-right: 5px;">
-                                    <label class="black-text">Select a city (To)</label>
-
-                                    <input
-                                      class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched"
-                                      type="text" name="amount" autocomplete="on" id='bus_destination'
-                                      placeholder="Type City Name" required>
-                                  </div>
-
-
-
-                                  <div class="col-md-3" style="padding-left: 5px;    padding-right: 0px;">
-                                    <label class="black-text active">Departing</label>
-
-                                    <input
-                                      class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched ng-untouched"
-                                      type="text" name="amount" autocomplete="on" id='departing' required>
-                                  </div>
-                                  <div class="col-md-3"><label class="black-text"><button type="submit"
-                                        ng-click="sendRecharge(recharge)"
-                                        class="btn btn-warning waves-effect waves-light mt-4" value="submit">Desire Book
-                                        Go</button>
-
-                                    </label></div>
-                                </div>
-                              </form>
-                            </div> -->
-                            <!--/.Panel 4-->
+                        
 
                         </div>
 

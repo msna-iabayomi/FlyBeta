@@ -123,7 +123,7 @@ ticket_nationality.textContent = nationality1_input;
 // FORM FOR RIDE
 const carForm = selector("#carForm");
   // Show Ticket Button
-selector("#print-ticket").style.display = 'none';
+selector("#summary").style.display = 'none';
 // Show Ticket Button
 
 const travel_type = selector('#travel_type');
@@ -155,7 +155,7 @@ const ticket_pickup_meridiem = selector('#ticket_pickup_meridiem');
 
 carForm.addEventListener('submit', (e)=>{
   e.preventDefault();
-  selector("#print-ticket").style.display = 'block'
+  selector("#summary").style.display = 'block'
 const travel_type1 =  travel_type.options[travel_type.selectedIndex].value;
 const source_city1 = source_city.value;
 const destination_city1 = destination_city.value;
