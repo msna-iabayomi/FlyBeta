@@ -1,3 +1,4 @@
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -150,8 +151,8 @@ section.banner1 {
 }
 
 #classType {
-  width: 13rem;
-  margin-left: 5.8rem;
+  width: 13rem !important;
+  margin-left: 3.0rem !important;
   height: 45px;
 }
 
@@ -180,7 +181,7 @@ section.banner1 {
 @media only screen and (max-width: 767px) {
   .centerElem {
     float: none !important;
-    margin: 0 auto !important;
+    margin: 0 auto !important;departing-date-picker
   }
 }
 
@@ -212,13 +213,13 @@ section.banner1 {
     text-align: center !important;
   }
   div#carousel-example-1z .carousel-item {
-    height: 180px;
+    height: 180px;departing-date-picker
   }
-  .carousel-caption {
+  .carousel-captiodeparting-date-picker
     top: 0;
   }
-  img.d-block.w-100 {
-    height: 180px;
+  img.d-block.w-10departing-date-picker
+    height: 180px;departing-date-picker
   }
 }
 
@@ -389,7 +390,48 @@ section.banner1 {
     width: 120px;
   }
 }
+/*   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         MEDIA QUERIES BY TOSIN
+          HEADER RESPONSIVENESS
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+     @media only screen and (min-width: 375px) {
+      #childrenNumber {
+        margin-right: 4rem;
+      }
+      
+      #adultNumber,
+    #childrenNumber,
+    #classType #flight_saveAndBook {
+      width: 13rem;
+      margin-right: 4rem;
+      margin-left: -2.5rem;
+    }
+    
+    #classType {
+      width: 13rem;
+      margin-right: 5.0rem;
+      height: 45px;
+      margin-left: -2.5rem !important;
+    }
+    
+    #departing-date-picker {
+      margin-left: -3rem;
+    }
 
+    #destinationTo {
+      margin-left: -3rem;
+  }
+
+  #originFrom {
+    margin-left: -3rem;
+}
+
+
+#paddingleft {
+  margin-left: -6rem;
+}
+    }
+    
 .modal-dialog {
   max-width: 1000px;
 }
